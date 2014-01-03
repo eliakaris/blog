@@ -1,0 +1,62 @@
+{%- block doctype %}<!doctype html itemscope itemtype="http://schema.org/Blog">
+<meta itemprop="creator" content="Elia Karagiannis">
+<meta itemprop="name" content="eliakaris.com">
+<meta itemprop="description" content="Personal blog for Elia Karagiannis">
+{%- endblock %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    {%- block meta %}{%- endblock %}
+    <title>{% block title %}Elia Karagiannis{% endblock %}</title>
+    <link rel="alternate" type="application/rss+xml" href="/rss"/>
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600|Inconsolata' rel='stylesheet' type='text/css'>
+    {%- block head %}{%- endblock %}
+  </head>
+
+  <body>
+    <nav>
+      <div class="full">
+        <h1><a href="/">Elia Karagiannis</a></h1>
+        <ul>
+          <li><a href="/" {% if section == "home" %}class="section"{% endif %}>Home</a></li>
+          <li><a href="/blog" {% if section == "blog" %}class="section"{% endif %}>Archive</a></li>
+          <li><a href="/about" {% if section == "about" %}class="section"{% endif %}>About</a></li>
+        </ul>
+        <div style="clear:both"></div>
+      </div>
+    </nav>
+
+    <section id="content">
+      {%- block content_full %}
+      <div class="full">
+        {%- block content %}{%- endblock %}
+      </div>
+      {%- endblock %}
+    </section>
+
+    <footer>
+      <div class="full">
+        <hr />
+
+        <div itemscope itemtype="http://data-vocabulary.org/Person" class="hidden">
+          <span itemprop="name">Elia Karagiannis</span>,
+          <a href="http://eliakaris.com" itemprop="url">eliakaris.com</a>
+          <span itemprop="address" itemscope
+            itemtype="http://data-vocabulary.org/Address">
+            <span itemprop="locality">Seattle</span>,
+            <span itemprop="region">Washington</span>
+          </span>
+          <span itemprop="title">Software Development Engineer</span>
+          <span itemprop="affiliation">Microsoft</span>
+        </div>
+
+        <p>© 2013 - 2014 <a href="/about">Elia Karagiannis</a> ∙ <a href="http://twitter.com/eliakaris">Follow @eliakaris</a> ∙ <a href="https://github.com/eliakaris/eliakaris.com">View source</a></p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  </body>
+</html>
