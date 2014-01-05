@@ -1,1 +1,0 @@
-Everything is backed up and I'm about to format my computer.  Goodbye Windows! Hello Ubuntu!<br />
