@@ -63,7 +63,9 @@ exports.init = function() {
     }
   });
 
+  /*
   fs.watch(entriesFilename, loadBlogEntries);
   fs.watch(postsDirectory, loadBlogEntries);
+  */
   loadBlogEntries();
 };
