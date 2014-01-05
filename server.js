@@ -8,7 +8,7 @@ var express = require('express'),
 var app = express();
 
 app.configure(function() {
-  app.set('port', 3001);
+  app.set('port', 8080);
   app.set('views', __dirname + '/views');
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
