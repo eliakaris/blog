@@ -1,1 +1,3 @@
-But why?  Is anyone going to read this?  Honestly, I don&#39;t really care.  I see this blog as my personal journal where I&#39;m free to &quot;nerd out&quot;&nbsp; Perhaps this will spare others from the agony of my many nerdy rants since I now have an outlet to vent.
+Welcome to my blog!  This is the first blog I've ever really written.  It is a place where I'll write about life, programming, and sports.
+
+Enjoy!
