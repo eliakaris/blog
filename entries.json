@@ -4,5 +4,11 @@
     "slug": "i-have-a-blog",
     "pub_date": "2014-01-04 19:25:00",
     "format": "md"
+  },
+  {
+    "title": "Running Node.js on Azure.",
+    "slug": "node-js-on-azure",
+    "pub_date": "2014-01-07 00:25:00",
+    "format": "md"
   }
 ]
