@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://eliakaris.com</loc>
+    <loc>http://www.eliakaris.com</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>http://eliakaris.com/about</loc>
+    <loc>http://www.eliakaris.com/about</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>http://eliakaris.com/blog</loc>
+    <loc>http://www.eliakaris.com/blog</loc>
     <changefreq>daily</changefreq>
   </url>
   {%- for entry in entries %}
   <url>
-    <loc>http://eliakaris.com/{{ entry.slug }}</loc>
+    <loc>http://www.eliakaris.com/{{ entry.slug }}</loc>
     <lastmod>{{ entry.pub_date_sitemap }}</lastmod>
     <changefreq>{% if loop.first %}daily{% else %}monthly{% endif %}</changefreq>
   </url>

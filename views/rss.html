@@ -3,17 +3,17 @@
   <channel>
     <title>Elia Karagiannis</title>
     <description>RSS feed for eliakaris.com</description>
-    <link>http://eliakaris.com</link>
+    <link>http://www.eliakaris.com</link>
     <lastBuildDate>{{ entries[0].pub_date_rfc822 }}</lastBuildDate>
     <pubDate>{{ entries[0].pub_date_rfc822 }}</pubDate>
     <ttl>720</ttl>
     {% for entry in entries %}
     <item>
       <title>{{ entry.title }}</title>
-      <link>http://eliakaris.com/{{ entry.slug }}</link>
+      <link>http://www.eliakaris.com/{{ entry.slug }}</link>
       <description>{{ entry.html|escape }}</description>
       <author>eliakaris@hotmail.com (Elia Karagiannis)</author>
-      <guid>http://eliakaris.com/{{ entry.slug }}</guid>
+      <guid>http://www.eliakaris.com/{{ entry.slug }}</guid>
       <pubDate>{{ entry.pub_date_rfc822 }}</pubDate>
     </item>
     {% endfor %}
