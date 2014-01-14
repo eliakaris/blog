@@ -223,25 +223,8 @@ hr {
     margin: 0 auto;
 }
 
-.smugmug {
-  float: left;
-  width: 672px;
-}
-
-.smugmug img {
-  border-radius: 5px;
-  display: inline;
-  max-width: 658px;
-  margin: 15px 15px 0 0;
-}
-
-.smugmug img.key {
-  margin: 0;
-}
-
 img.me {
     border-radius: 5px;
-    width: 100%;
 }
 
 .hidden {
