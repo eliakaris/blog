@@ -1,16 +1,14 @@
 Node.js, MacOS, git, open source, and even blogs are pretty new to me.  The starting purpose of this is to get me outside of my comfort zone and try new things in technology.
 
 Here's what I've learned so far:
-<ol>
-	<li>[GitHub](http://github.com) rocks!
-	<li>After setting up a dev environment on Mac, it's fairly easy.
-	<li>Bash is powerful but has a little bit of learning curve.  I keep typing dir and cls :(
-	<li>Git is tricky at times.  Git add, git commit -m, git push...
-	<li>Hosting a node.js based server on Azure is easy
-	<li>The default editor, vim, is a fucking mind fuck!  I mean, really, ; is an activator key?? :)
-	<li>There are some perm differences between running on hosted Azure and a Linux VM
-	<li>There is a learning curve in MacOS.  Mainly the control vs command key combos.
-</ol>
+1. [GitHub](http://github.com) rocks!
+2. After setting up a dev environment on Mac, it's fairly easy.
+3. Bash is powerful but has a little bit of learning curve.  I keep typing dir and cls :(
+4. Git is tricky at times.  Git add, git commit -m, git push...
+5. Hosting a node.js based server on Azure is easy
+6. The default editor, vim, is a fucking mind fuck!  I mean, really, ; is an activator key?? :)
+7. There are some perm differences between running on hosted Azure and a Linux VM
+8. There is a learning curve in MacOS.  Mainly the control vs command key combos.
 
 After the initial setup, things are fairly easy.  NPM is a great package manager.  Getting the packages is easy, just add your dependencies and type npm init.
 
@@ -20,11 +18,9 @@ Hosting the blog
 After getting the blog setup locally, I needed to find a place to host the blog.  Here is where I decided to not use open source but instead see how hard it is to host a node.js site on Windows Azure.
 
 I did this for multiple reasons:
-<ol>
-	<li>I dont have access to a Linux server.
-	<li>I get hosting for free.
-	<li>Might as well see what Azure hosting is like for non ms tech.
-</ol>
+1. I dont have access to a Linux server.
+2. I get hosting for free.
+3. Might as well see what Azure hosting is like for non ms tech.
 
 With that out of the way, let's dive in to what was required.
 
