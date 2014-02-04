@@ -10,5 +10,11 @@
     "slug": "node-js-on-azure",
     "pub_date": "2014-01-07 00:25:00",
     "format": "md"
+  },
+  {
+    "title": "Developing a Node.js site on Windows",
+    "slug": "node-js-development-on-windows",
+    "pub_date": "2014-02-03 00:25:00",
+    "format": "md"
   }
 ]
