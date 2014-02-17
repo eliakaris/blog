@@ -6,14 +6,20 @@
     "format": "md"
   },
   {
-    "title": "Running Node.js on Azure.",
+    "title": "Running Node.js on Azure",
     "slug": "node-js-on-azure",
-    "pub_date": "2014-01-07 00:25:00",
+    "pub_date": "2014-01-08 00:25:00",
     "format": "md"
   },
   {
     "title": "Developing a Node.js site on Windows",
     "slug": "node-js-development-on-windows",
+    "pub_date": "2014-02-03 00:25:00",
+    "format": "md"
+  },
+  {
+    "title": "test",
+    "slug": "test",
     "pub_date": "2014-02-03 00:25:00",
     "format": "md"
   }
