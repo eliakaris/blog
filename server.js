@@ -12,6 +12,8 @@ app.configure(function() {
   app.set('views', __dirname + '/views');
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
+  app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 });
 
 var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
