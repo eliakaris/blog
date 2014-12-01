@@ -62,4 +62,4 @@ After it is done, you are good to go!  Click the link and see your blog.
 
 There you go, my first blog post on something.
 
-Stay tuned, later I'll probably write some on debugging, setting up custom domains, who knows.
+Stay tuned, later I'll probably write some on debugging, setting up custom domains, who knows..
