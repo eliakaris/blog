@@ -1,0 +1,10 @@
+article
+{
+	width: 520px;
+}
+
+article img
+{
+	display: block;
+	padding: 5px;
+}
