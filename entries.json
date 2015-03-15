@@ -28,5 +28,11 @@
     "slug": "upgrading-to-bootstrap",
     "pub_date": "2014-11-28 00:25:00",
     "format": "md"
+  },
+  {
+    "title": "Azure continuous deployment",
+    "slug": "azure-continuous-deployment",
+    "pub_date": "2015-03-15 00:25:00",
+    "format": "md"
   }
 ]

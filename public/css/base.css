@@ -1,10 +1,11 @@
 article
 {
-	width: 520px;
+    width: 720px;
 }
 
 article img
 {
-	display: block;
-	padding: 5px;
+    display: block;
+    padding: 5px;
+    max-width: 720px
 }
