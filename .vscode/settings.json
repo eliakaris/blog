@@ -1,0 +1,15 @@
+{
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "editor.trimAutoWhitespace": true,
+    "editor.tabSize": 2,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.tabSize": 2
+    },
+    "[tsx]": {
+        "editor.tabSize": 2
+    }
+}
