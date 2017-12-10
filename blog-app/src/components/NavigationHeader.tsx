@@ -1,19 +1,25 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 function NavigationHeader() {
   return (
   <div>
-    <div className="App-header">
-        <h2>Welcome to React!!</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/blog">Archive</NavLink></li>
-      </ul>
-    </nav>
+    <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <NavLink to="/">Elia Karagiannis</NavLink>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav pullRight>
+          <NavItem><NavLink to="/">Home</NavLink></NavItem>
+          <NavItem><NavLink to="/about">About</NavLink></NavItem>
+          <NavItem><NavLink to="/blog">Archive</NavLink></NavItem>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   </div>);
 }
 
