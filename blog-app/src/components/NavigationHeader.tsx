@@ -13,7 +13,7 @@ function NavigationHeader() {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Nav pullRight>
+        <Nav pullRight={true}>
           <NavItem><NavLink to="/">Home</NavLink></NavItem>
           <NavItem><NavLink to="/about">About</NavLink></NavItem>
           <NavItem><NavLink to="/blog">Archive</NavLink></NavItem>

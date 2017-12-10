@@ -1,5 +1,4 @@
 import * as React from 'react';
-import "./About.css";
 
 function About() {
   return (
@@ -20,7 +19,8 @@ function About() {
 
       <h2>Contact</h2>
       <a href="mailto:eliakaris@hotmail.com" rel="author">eliakaris@hotmail.com</a>,
-        <a href="http://twitter.com/eliakaris">@eliakaris</a>, <a href="http://www.linkedin.com/in/eliakaris">LinkedIn</a>,
+        <a href="http://twitter.com/eliakaris">@eliakaris</a>,
+        <a href="http://www.linkedin.com/in/eliakaris">LinkedIn</a>,
         <a href="http://www.facebook.com/eliakaris">Facebook</a>
       <p>
         <a
@@ -29,7 +29,8 @@ function About() {
           data-show-count="true"
           data-lang="en"
           data-show-screen-name="true"
-          data-size="large">Follow @eliakaris
+          data-size="large"
+        >Follow @eliakaris
         </a>
       </p>
 
