@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Hello from './Hello';
-import BlogEntry from './BlogEntry';
+import About from './About';
+import Blog from './Blog';
 
-function NavigationHeader() {
+function Main() {
   return (
     <main>
-      <Switch>
-        <Route exact={true} path="/" component={Hello} />
-        <Route path="/blog/:slug" component={BlogEntry} />
-      </Switch>
+      <Route exact={true} path="/" component={Hello} />
+      <Route exact={true} path="/about" component={About} />
+      <Route path="/blog" component={Blog} />
   </main>);
 }
 
-export default NavigationHeader;
+export default Main;

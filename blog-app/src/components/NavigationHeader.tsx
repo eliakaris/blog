@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavigationHeader() {
   return (
@@ -9,8 +9,9 @@ function NavigationHeader() {
     </div>
     <nav>
       <ul>
-        <li><Link to="/blog/first-blog-item">First blog item</Link></li>
-        <li><Link to="/blog/second-blog-item">Second blog item</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/blog">Archive</NavLink></li>
       </ul>
     </nav>
   </div>);
