@@ -6,7 +6,7 @@ import Blog from './Blog';
 
 function Main() {
   return (
-    <main>
+    <main className="container">
       <Route exact={true} path="/" component={Hello} />
       <Route exact={true} path="/about" component={About} />
       <Route path="/blog" component={Blog} />
