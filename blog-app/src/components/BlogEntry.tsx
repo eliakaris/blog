@@ -9,7 +9,6 @@ export interface Props {
 }
 
 function BlogEntry(props: Props) {
-  console.log('hit');
   return (
     <div>
       blog entry: {props.match.params.slug}
