@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import Hello from './Hello';
+import Hello from '../Hello';
 import * as ShallowRenderer from 'react-test-renderer/shallow';
 import * as ReactSixteenAdapter from 'enzyme-adapter-react-16';
 import { configure } from 'enzyme';
@@ -8,7 +8,7 @@ import { configure } from 'enzyme';
 configure({ adapter: new ReactSixteenAdapter() });
 
 describe('<Hello /> tests', () => {
-  let renderer: ShallowRenderer;
+  let renderer: any;
 
   beforeAll(() => {
     renderer = ShallowRenderer.createRenderer();

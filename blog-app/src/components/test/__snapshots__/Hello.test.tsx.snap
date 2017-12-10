@@ -10,5 +10,17 @@ exports[`<Hello /> tests renders a snapshot 1`] = `
     Hello 
     Daniel!
   </div>
+  <div>
+    <button
+      onClick={undefined}
+    >
+      -
+    </button>
+    <button
+      onClick={undefined}
+    >
+      +
+    </button>
+  </div>
 </div>
 `;
