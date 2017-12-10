@@ -8,7 +8,10 @@
     "bootstrap": "^3.3.7",
     "compression": "^1.7.1",
     "express": "^4.16.2",
+    "highlight.js": "^9.12.0",
     "if-env": "^1.0.0",
+    "marked": "^0.3.7",
+    "moment": "^2.19.3",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
@@ -16,10 +19,12 @@
     "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
     "react-scripts-ts": "2.8.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "string": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
+    "server": "node ./server/server",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
