@@ -6,8 +6,6 @@ path = require('path');
 var app = express();
 app.set('port', process.env.PORT || 3001);
 
-console.log('hi there');
-
 blog.init();
 routes.init(app);
 
