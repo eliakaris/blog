@@ -41,7 +41,7 @@ class BlogList extends React.Component<RouteComponentProps<any>, State> {
     return (
       <div>
         <ul>
-          { blogItems }
+          {blogItems}
         </ul>
     </div>
     );
