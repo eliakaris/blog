@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import Hello from './Hello';
+import Hello from '../containers/Hello';
 import About from './About';
 import Blog from './Blog';
 

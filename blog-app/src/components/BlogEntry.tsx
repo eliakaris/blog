@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as Request from 'superagent';
+import { BlogEntryData } from "../types/BlogEntry";
 import './BlogEntry.css';
 
 export interface Props {
@@ -8,15 +9,6 @@ export interface Props {
       slug: string;
     }
   };
-}
-
-interface BlogEntryData {
-  pretty_pub_date: string;
-  html: string;
-  summary: string;
-  slug: string;
-  title: string;
-  pub_date: string;
 }
 
 interface State {
