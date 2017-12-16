@@ -3,7 +3,7 @@ import { Route, RouteComponentProps } from 'react-router-dom';
 import BlogEntry from './BlogEntry';
 import BlogList from '../containers/BlogList';
 
-function Blog({ match }: RouteComponentProps<any>) {
+function Blog({ match }: RouteComponentProps<{}>) {
   return (
     <div>
       <Route exact={true} path={`${match.url}`} component={BlogList} />

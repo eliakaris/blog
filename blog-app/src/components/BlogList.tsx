@@ -1,17 +1,14 @@
 import * as React from 'react';
+import { Dispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { BlogEntryData } from '../types/BlogEntry';
-import * as actions from '../actions/index';
 
-interface Props {
+export interface Props {
   blogEntries: BlogEntryData[];
+  dispatch: Dispatch<{}>;
 }
 
 class BlogList extends React.Component<Props> {
-
-  componentDidMount() {
-    actions.getBlogEntries();
-  }
 
   render() {
     // const { match } = this.props;
@@ -23,7 +20,7 @@ class BlogList extends React.Component<Props> {
         var year = new Date(blogItem.pub_date).getFullYear();
         if (!years[year]) {
           years[year] = true;
-          blogItems.push(<h2>{year}</h2>);
+          blogItems.push(<h2 key={year}>{year}</h2>);
         }
 
         blogItems.push(<li key={blogItem.slug}><NavLink to={`/blog/${blogItem.slug}`}>{blogItem.title}</NavLink></li>);

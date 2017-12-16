@@ -48,4 +48,4 @@ export function getBlogEntries() {
       dispatch({ type: constants.REQUEST_BLOG_ENTRIES_SUCCESS, blogEntries: response.body});
     });
   };
-};
+}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Request from 'superagent';
-import { BlogEntryData } from "../types/BlogEntry";
+import { BlogEntryData } from '../types/BlogEntry';
 import './BlogEntry.css';
 
 export interface Props {
@@ -28,18 +28,25 @@ class BlogEntry extends React.Component<Props, State> {
   render() {
     return (
       this.state && this.state.blogEntry && 
+      (
       <div className="container">
         <article>
         <h1><a href={`/${this.state.blogEntry.slug}`} itemProp="url">{this.state.blogEntry.title}</a></h1>
         <div className="meta">
           <p>
-            <time itemProp="dateCreated" dateTime={`${this.state.blogEntry.pub_date}`}>{ this.state.blogEntry.pretty_pub_date }</time>
-             ∙ <a href={`https://github.com/eliakaris/blog/tree/master/posts/${this.state.blogEntry.slug}.md`}>History</a>
+            <time itemProp="dateCreated" dateTime={`${this.state.blogEntry.pub_date}`}>
+              {this.state.blogEntry.pretty_pub_date}
+            </time>
+             ∙
+             <a href={`https://github.com/eliakaris/blog/tree/master/posts/${this.state.blogEntry.slug}.md`}>
+              History
+             </a>
           </p>
         </div>
         <div dangerouslySetInnerHTML={{__html: this.state.blogEntry.html}} />
         </article>
       </div>
+      )
     );
   }
 }

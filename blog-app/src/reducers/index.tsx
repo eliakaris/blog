@@ -2,11 +2,13 @@
 
 import { EnthusiasmAction, RequestBlogEntriesAction } from '../actions';
 import { StoreState, HelloState } from '../types/index';
-import { BlogEntryData } from "../types/BlogEntry";
+import { BlogEntryData } from '../types/BlogEntry';
 import * as actions from '../constants/index';
 import { combineReducers } from 'redux';
 
-export function enthusiasm(state: HelloState = { languageName: '', enthusiasmLevel: 1 }, action: EnthusiasmAction): HelloState {
+export function enthusiasm(
+  state: HelloState = { languageName: '', enthusiasmLevel: 1 },
+  action: EnthusiasmAction): HelloState {
   switch (action.type) {
     case actions.INCREMENT_ENTHUSIASM:
       return { ...state, enthusiasmLevel: state.enthusiasmLevel + 1 };
