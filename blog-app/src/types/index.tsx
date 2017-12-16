@@ -1,14 +1,14 @@
-import { BlogEntryData } from "./BlogEntry";
 
 // src/types/index.tsx
 
-export interface SlugToBlogEntryMap {
-  [slug: string]: BlogEntryData;
+import { BlogEntryData } from "./BlogEntry";
+
+export interface HelloState {
+  languageName: string;
+  enthusiasmLevel: number;
 }
 
 export interface StoreState {
-  blogEntries: SlugToBlogEntryMap;
-
-  languageName: string;
-  enthusiasmLevel: number;
+  blogEntries: BlogEntryData[];
+  helloState: HelloState;
 }

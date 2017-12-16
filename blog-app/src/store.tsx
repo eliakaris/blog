@@ -6,7 +6,7 @@ import * as Reducers from './reducers/index';
 
 export function configureStore() {
   const store = createStore<StoreState>(
-    Reducers.enthusiasm,
+    Reducers.default,
     applyMiddleware(
       thunkMiddleware,
       createLogger

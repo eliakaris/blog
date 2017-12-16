@@ -1,40 +1,32 @@
 import * as React from 'react';
-import { NavLink, RouteComponentProps } from 'react-router-dom';
-import * as Request from 'superagent';
+import { NavLink } from 'react-router-dom';
+import { BlogEntryData } from '../types/BlogEntry';
+import * as actions from '../actions/index';
 
-interface BlogItem {
-  title: string;
-  slug: string;
-  pub_date: Date;
-  format: string;
+interface Props {
+  blogEntries: BlogEntryData[];
 }
 
-interface State {
-   blogList: Array<BlogItem>;
-}
+class BlogList extends React.Component<Props> {
 
-class BlogList extends React.Component<RouteComponentProps<any>, State> {
-
-  componentWillMount() {
-    Request.get('/api/blog').then((response) => {
-      this.setState({ blogList: response.body });
-    })
+  componentDidMount() {
+    actions.getBlogEntries();
   }
 
   render() {
-    const { match } = this.props;
+    // const { match } = this.props;
     var blogItems: JSX.Element[];
     blogItems = [];
-    if (this.state) {
+    if (this.props.blogEntries && this.props.blogEntries.length > 0) {
       var years = {};
-      this.state.blogList.map((blogItem) => {
+      this.props.blogEntries.map((blogItem) => {
         var year = new Date(blogItem.pub_date).getFullYear();
         if (!years[year]) {
           years[year] = true;
           blogItems.push(<h2>{year}</h2>);
         }
 
-        blogItems.push(<li><NavLink to={`${match.url}/${blogItem.slug}`}>{blogItem.title}</NavLink></li>);
+        blogItems.push(<li key={blogItem.slug}><NavLink to={`/blog/${blogItem.slug}`}>{blogItem.title}</NavLink></li>);
       });
     }
 
