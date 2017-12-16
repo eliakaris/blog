@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { Dispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { BlogEntryData } from '../types/BlogEntry';
 
 export interface Props {
   blogEntries: BlogEntryData[];
-  dispatch: Dispatch<{}>;
 }
 
 class BlogList extends React.Component<Props> {
