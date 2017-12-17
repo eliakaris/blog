@@ -1,49 +1,32 @@
 import * as React from 'react';
-import * as Request from 'superagent';
 import { BlogEntryData } from '../types/BlogEntry';
 import './BlogEntry.css';
 
 export interface Props {
-  match: {
-    params: {
-      slug: string;
-    }
-  };
-}
-
-interface State {
   blogEntry: BlogEntryData;
 }
 
-class BlogEntry extends React.Component<Props, State> {
-
-  componentWillMount() {
-    if (this.props && this.props.match && this.props.match.params && this.props.match.params.slug) {
-      Request.get(`/api/blog/${this.props.match.params.slug}`).then((response) => {
-        this.setState({ blogEntry: response.body });
-      });
-    }
-  }
+class BlogEntry extends React.Component<Props> {
 
   render() {
     return (
-      this.state && this.state.blogEntry && 
+      this.props && this.props.blogEntry && 
       (
       <div className="container">
         <article>
-        <h1><a href={`/${this.state.blogEntry.slug}`} itemProp="url">{this.state.blogEntry.title}</a></h1>
+        <h1><a href={`/${this.props.blogEntry.slug}`} itemProp="url">{this.props.blogEntry.title}</a></h1>
         <div className="meta">
           <p>
-            <time itemProp="dateCreated" dateTime={`${this.state.blogEntry.pub_date}`}>
-              {this.state.blogEntry.pretty_pub_date}
+            <time itemProp="dateCreated" dateTime={`${this.props.blogEntry.pub_date}`}>
+              {this.props.blogEntry.pretty_pub_date}
             </time>
              ∙
-             <a href={`https://github.com/eliakaris/blog/tree/master/posts/${this.state.blogEntry.slug}.md`}>
+             <a href={`https://github.com/eliakaris/blog/tree/master/posts/${this.props.blogEntry.slug}.md`}>
               History
              </a>
           </p>
         </div>
-        <div dangerouslySetInnerHTML={{__html: this.state.blogEntry.html}} />
+        <div dangerouslySetInnerHTML={{__html: this.props.blogEntry.html}} />
         </article>
       </div>
       )

@@ -2,13 +2,20 @@ exports.blogList = function (req, res) {
   res.json(global.entries);
 };
 
-exports.blogEntry = function (req, res) {
-  var slug = req.params.slug;
+function getBlogEntry(slug, res) {
   var entry = global.blogData[slug];
   if (entry) {
     res.json(entry);
   }
   else {
-    res.res.sendStatus(404);
+    res.sendStatus(404);
   }
+}
+
+exports.blogEntry = function (req, res) {
+  return getBlogEntry(req.params.slug, res);
+}
+
+exports.latestBlogEntry = function (req, res) {
+  return getBlogEntry(global.entries[0].slug, res);
 }

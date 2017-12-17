@@ -53,3 +53,36 @@ export function getBlogEntries() {
       });
   };
 }
+
+interface RequestBlogEntry {
+  type: constants.REQUEST_BLOG_ENTRY;
+}
+
+interface RequestBlogEntrySuccess {
+  type: constants.REQUEST_BLOG_ENTRY_SUCCESS;
+  blogEntry: BlogEntryData;
+}
+
+interface RequestBlogEntryFailure {
+  type: constants.REQUEST_BLOG_ENTRY_FAIL;
+  error: string;
+}
+
+export type RequestBlogEntryAction = RequestBlogEntry | RequestBlogEntrySuccess | RequestBlogEntryFailure;
+
+export function getBlogEntry(slug: string) {
+  return (dispatch: Dispatch<RequestBlogEntryAction>) => {
+    dispatch({ type: constants.REQUEST_BLOG_ENTRY });
+    if (!slug || slug.length == 0) {
+      slug = 'latest';
+    }
+
+    Request.get(`/api/blog/${slug}`).then(
+      (response) => {
+        dispatch({ type: constants.REQUEST_BLOG_ENTRY_SUCCESS, blogEntry: response.body});
+      },
+      (failureReason) => {
+        dispatch({ type: constants.REQUEST_BLOG_ENTRY_FAIL, error: failureReason.message});
+      });
+  };
+}

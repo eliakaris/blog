@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, RouteComponentProps } from 'react-router-dom';
-import BlogEntry from './BlogEntry';
+import BlogEntry from '../containers/BlogEntry';
 import BlogList from '../containers/BlogList';
 
 function Blog({ match }: RouteComponentProps<{}>) {

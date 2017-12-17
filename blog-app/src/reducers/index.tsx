@@ -1,6 +1,6 @@
 // src/reducers/index.tsx
 
-import { EnthusiasmAction, RequestBlogEntriesAction } from '../actions';
+import { EnthusiasmAction, RequestBlogEntriesAction, RequestBlogEntryAction } from '../actions';
 import { StoreState, HelloState } from '../types/index';
 import { BlogEntryData } from '../types/BlogEntry';
 import * as actions from '../constants/index';
@@ -20,6 +20,28 @@ export function enthusiasm(
   }
 }
 
+export function blogEntry(
+  state: BlogEntryData = {
+    html: '',
+    pretty_pub_date: '',
+    pub_date: '',
+    slug: '',
+    summary: '',
+    title: ''
+  },
+  action: RequestBlogEntryAction): BlogEntryData {
+  switch (action.type) {
+    case actions.REQUEST_BLOG_ENTRY:
+      return state;
+
+    case actions.REQUEST_BLOG_ENTRY_SUCCESS:
+      return action.blogEntry;
+
+    default:
+      return state;
+  }
+}
+
 export function blogEntries(state: BlogEntryData[] = [], action: RequestBlogEntriesAction): BlogEntryData[] {
   switch (action.type) {
     case actions.REQUEST_BLOG_ENTRIES:
@@ -35,6 +57,7 @@ export function blogEntries(state: BlogEntryData[] = [], action: RequestBlogEntr
 
 export default combineReducers<StoreState>(
   {
+    blogEntry,
     blogEntries,
     helloState: enthusiasm
   }

@@ -9,6 +9,7 @@ export interface HelloState {
 }
 
 export interface StoreState {
+  blogEntry: BlogEntryData;
   blogEntries: BlogEntryData[];
   helloState: HelloState;
 }

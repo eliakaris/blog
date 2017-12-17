@@ -4,9 +4,10 @@ import BlogList, { Props } from '../components/BlogList';
 import { StoreState } from '../types/index';
 import { connect } from 'react-redux';
 import * as actions from '../actions/index';
+import { RequestBlogEntriesAction } from '../actions/index';
 
 interface BlogListContainerProps extends Props {
-  dispatch: Dispatch<{}>;
+  dispatch: Dispatch<RequestBlogEntriesAction>;
 }
 
 class BlogListContainer extends React.Component<BlogListContainerProps> {
