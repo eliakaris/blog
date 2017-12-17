@@ -20,7 +20,7 @@ export function enthusiasm(
   }
 }
 
-export function blogListReducer(state: BlogEntryData[] = [], action: RequestBlogEntriesAction): BlogEntryData[] {
+export function blogEntries(state: BlogEntryData[] = [], action: RequestBlogEntriesAction): BlogEntryData[] {
   switch (action.type) {
     case actions.REQUEST_BLOG_ENTRIES:
       return state;
@@ -35,7 +35,7 @@ export function blogListReducer(state: BlogEntryData[] = [], action: RequestBlog
 
 export default combineReducers<StoreState>(
   {
-    blogEntries: blogListReducer,
+    blogEntries,
     helloState: enthusiasm
   }
 );

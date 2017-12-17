@@ -44,8 +44,12 @@ export type RequestBlogEntriesAction = RequestBlogEntries | RequestBlogEntriesSu
 export function getBlogEntries() {
   return (dispatch: Dispatch<RequestBlogEntriesAction>) => {
     dispatch({ type: constants.REQUEST_BLOG_ENTRIES });
-    Request.get('/api/blog').then((response) => {
-      dispatch({ type: constants.REQUEST_BLOG_ENTRIES_SUCCESS, blogEntries: response.body});
-    });
+    Request.get('/api/blog').then(
+      (response) => {
+        dispatch({ type: constants.REQUEST_BLOG_ENTRIES_SUCCESS, blogEntries: response.body});
+      },
+      (failureReason) => {
+        dispatch({ type: constants.REQUEST_BLOG_ENTRIES_FAIL, error: failureReason.message});
+      });
   };
 }
