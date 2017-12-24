@@ -1,5 +1,5 @@
 {
-  "name": "blog-app",
+  "name": "blog",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
