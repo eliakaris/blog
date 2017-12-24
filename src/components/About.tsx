@@ -15,7 +15,7 @@ function About() {
 
       <h2>Hobbies</h2>
       <p><a href="http://github.com/eliakaris">programming</a>, 
-      <a href="http://www.bing.com/search?q=rams+football">sports</a>, cleaning.</p>
+      <a href="http://www.bing.com/search?q=rams+football">sports</a></p>
 
       <h2>Contact</h2>
       <a href="mailto:eliakaris@hotmail.com" rel="author">eliakaris@hotmail.com</a>,
