@@ -21,7 +21,7 @@ The first step in the new build is to set some environment variables for the bui
 
 # The build definition
 
-![The build template](/img/VsoBuildContinuousDeployment/BuildTemplate.png)
+![The build template](/img/VsoBuildContinuousDeployment/BuildTemplate.PNG)
 
 As you can see, the build process is very easy to see what's going on.  Just a sequential list of actions to take.  Some actions are already built in, such as build a solution and running of tests, and deploying to azure.
 
