@@ -21,7 +21,7 @@ class BlogEntry extends React.Component<Props> {
               {this.props.blogEntry.pretty_pub_date}
             </time>
              ∙
-             <a href={`https://github.com/eliakaris/blog/tree/master/posts/${this.props.blogEntry.slug}.md`}>
+             <a href={`https://github.com/eliakaris/blog/tree/master/server/data/posts/${this.props.blogEntry.slug}.md`}>
               History
              </a>
           </p>
