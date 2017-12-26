@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationHeader /> tests renders a snapshot 1`] = `
+<div>
+  <Uncontrolled(Navbar)
+    bsStyle="default"
+  >
+    <NavbarHeader>
+      <NavbarBrand>
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          to="/"
+        >
+          Elia Karagiannis
+        </NavLink>
+      </NavbarBrand>
+      <NavbarToggle />
+    </NavbarHeader>
+    <NavbarCollapse>
+      <Nav
+        bsClass="nav"
+        justified={false}
+        pullLeft={false}
+        pullRight={true}
+        stacked={false}
+      >
+        <NavItem
+          active={false}
+          disabled={false}
+        >
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/"
+          >
+            Home
+          </NavLink>
+        </NavItem>
+        <NavItem
+          active={false}
+          disabled={false}
+        >
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/about"
+          >
+            About
+          </NavLink>
+        </NavItem>
+        <NavItem
+          active={false}
+          disabled={false}
+        >
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/blog"
+          >
+            Archive
+          </NavLink>
+        </NavItem>
+      </Nav>
+    </NavbarCollapse>
+  </Uncontrolled(Navbar)>
+</div>
+`;

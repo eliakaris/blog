@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> tests renders a snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="container navbar"
+  >
+    <hr />
+    <div
+      className="hidden"
+      itemScope={true}
+      itemType="http://data-vocabulary.org/Person"
+    >
+      <span
+        itemProp="name"
+      >
+        Elia Karagiannis
+      </span>
+      ,
+      <a
+        href="http://www.eliakaris.com"
+        itemProp="url"
+      >
+        eliakaris.com
+      </a>
+      <span
+        itemProp="address"
+        itemScope={true}
+        itemType="http://data-vocabulary.org/Address"
+      >
+        <span
+          itemProp="locality"
+        >
+          Seattle
+        </span>
+        ,
+        <span
+          itemProp="region"
+        >
+          Washington
+        </span>
+      </span>
+      <span
+        itemProp="title"
+      >
+        Software Development Engineer
+      </span>
+      <span
+        itemProp="affiliation"
+      >
+        Pinterest
+      </span>
+    </div>
+    <p>
+      © 2013 - 2017 
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/about"
+      >
+        Elia Karagiannis
+      </NavLink>
+      ∙ 
+      <a
+        href="http://twitter.com/eliakaris"
+      >
+        Follow @eliakaris
+      </a>
+      ∙ 
+      <a
+        href="https://github.com/eliakaris/blog"
+      >
+        View source
+      </a>
+    </p>
+  </div>
+</footer>
+`;

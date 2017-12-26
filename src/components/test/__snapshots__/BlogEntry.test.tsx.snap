@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogEntry /> tests renders a snapshot of a blog entry 1`] = `
+<div
+  className="container"
+>
+  <article>
+    <h1>
+      <a
+        href="/test-blog-entry"
+        itemProp="url"
+      >
+        test blog entry
+      </a>
+    </h1>
+    <div
+      className="meta"
+    >
+      <p>
+        <time
+          dateTime="20171226"
+          itemProp="dateCreated"
+        >
+          December 26th 2017
+        </time>
+        ∙
+        <a
+          href="https://github.com/eliakaris/blog/tree/master/server/data/posts/test-blog-entry.md"
+        >
+          History
+        </a>
+      </p>
+    </div>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<div>hi there</div>",
+        }
+      }
+    />
+  </article>
+</div>
+`;

@@ -9,7 +9,6 @@ export interface Props {
 class BlogList extends React.Component<Props> {
 
   render() {
-    // const { match } = this.props;
     var blogItems: JSX.Element[];
     blogItems = [];
     if (this.props.blogEntries && this.props.blogEntries.length > 0) {

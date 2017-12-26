@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogList /> tests renders a snapshot of a multiple entry blog list 1`] = `
+<div>
+  <ul>
+    <h2 />
+    <li>
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/blog/test-blog-entry-1"
+      >
+        test blog entry 1
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/blog/test-blog-entry-2"
+      >
+        test blog entry 2
+      </NavLink>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<BlogList /> tests renders a snapshot of a single entry blog list 1`] = `
+<div>
+  <ul>
+    <h2 />
+    <li>
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/blog/test-blog-entry"
+      >
+        test blog entry
+      </NavLink>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<BlogList /> tests renders a snapshot of empty blog list 1`] = `
+<div>
+  <ul>
+    
+  </ul>
+</div>
+`;
