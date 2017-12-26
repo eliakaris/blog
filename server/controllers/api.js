@@ -1,5 +1,14 @@
 exports.blogList = function (req, res) {
-  res.json(global.entries);
+  res.json(
+    global.entries.map(
+      function(e) {
+
+        return {
+          slug: e.slug,
+          title: e.title,
+          pub_date: e.pub_date,
+        }
+      }));
 };
 
 function getBlogEntry(slug, res) {

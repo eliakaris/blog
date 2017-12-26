@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BlogEntryData } from '../types/BlogEntry';
+import { BlogListEntry } from '../types/BlogEntry';
 
 export interface Props {
-  blogEntries: BlogEntryData[];
+  blogEntries: BlogListEntry[];
 }
 
 class BlogList extends React.Component<Props> {

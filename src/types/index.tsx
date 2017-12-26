@@ -1,15 +1,9 @@
 
 // src/types/index.tsx
 
-import { BlogEntryData } from "./BlogEntry";
-
-export interface HelloState {
-  languageName: string;
-  enthusiasmLevel: number;
-}
+import { BlogEntryData, BlogListEntry } from "./BlogEntry";
 
 export interface StoreState {
   blogEntry: BlogEntryData;
-  blogEntries: BlogEntryData[];
-  helloState: HelloState;
+  blogEntries: BlogListEntry[];
 }

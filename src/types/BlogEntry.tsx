@@ -8,3 +8,9 @@ export interface BlogEntryData {
   title: string;
   pub_date: string;
 }
+
+export interface BlogListEntry {
+  slug: string;
+  title: string;
+  pub_date: string;
+}

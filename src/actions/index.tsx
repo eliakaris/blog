@@ -1,29 +1,7 @@
 import * as constants from '../constants';
 import * as Request from 'superagent';
-import { BlogEntryData } from '../types/BlogEntry';
+import { BlogEntryData, BlogListEntry } from '../types/BlogEntry';
 import { Dispatch } from 'react-redux';
-
-export interface IncrementEnthusiasm {
-    type: constants.INCREMENT_ENTHUSIASM;
-}
-
-export interface DecrementEnthusiasm {
-    type: constants.DECREMENT_ENTHUSIASM;
-}
-
-export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm;
-
-export function incrementEnthusiasm(): IncrementEnthusiasm {
-    return {
-        type: constants.INCREMENT_ENTHUSIASM
-    };
-}
-
-export function decrementEnthusiasm(): DecrementEnthusiasm {
-    return {
-        type: constants.DECREMENT_ENTHUSIASM
-    };
-}
 
 interface RequestBlogEntries {
   type: constants.REQUEST_BLOG_ENTRIES;
@@ -31,7 +9,7 @@ interface RequestBlogEntries {
 
 interface RequestBlogEntriesSuccess {
   type: constants.REQUEST_BLOG_ENTRIES_SUCCESS;
-  blogEntries: BlogEntryData[];
+  blogEntries: BlogListEntry[];
 }
 
 interface RequestBlogEntriesFailure {
