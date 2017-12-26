@@ -10,6 +10,7 @@ var entriesFilename = path.resolve(__dirname, './data/entries.json');
 var postsDirectory = path.resolve(__dirname, './data/posts');
 
 var loadBlogEntries = function() {
+  console.log('loading blog entries');
   var entries_json = fs.readFileSync(entriesFilename);
   var entries = JSON.parse(entries_json);
 
@@ -22,8 +23,8 @@ var loadBlogEntries = function() {
     entryDetails.pretty_pub_date = entry.pretty_pub_date || moment(entry.pub_date).format("MMMM Do, YYYY");
     entryDetails.pub_date = entry.pub_date;
 
-    var data = fs.readFileSync(path.resolve(postsDirectory, entry.slug + '.' + entry.format), 'utf8');
-    entryDetails.html = entry.format == 'md' ? marked(data) : data;
+    var data = fs.readFileSync(path.resolve(postsDirectory, entry.slug + '.md'), 'utf8');
+    entryDetails.html = marked(data);
     entryDetails.summary = S(entryDetails.html).stripTags().truncate(200).toString();
     entryDetails.slug = entry.slug;
     entryDetails.title = entry.title;
