@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "applicationinsights": "^1.0.1",
     "bootstrap": "^3.3.7",
     "compression": "^1.7.1",
     "express": "^4.16.2",

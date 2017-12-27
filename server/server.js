@@ -1,7 +1,10 @@
 var express = require('express'),
 routes = require('./routes'),
+appInsights = require("applicationinsights"),
 blog = require('./blog'),
 path = require('path');
+
+appInsights.start();
 
 var app = express();
 app.set('port', process.env.PORT || 3001);
