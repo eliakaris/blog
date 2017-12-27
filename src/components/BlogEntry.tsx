@@ -14,7 +14,7 @@ class BlogEntry extends React.Component<Props> {
       (
       <div className="container">
         <article>
-        <h1><a href={`/${this.props.blogEntry.slug}`} itemProp="url">{this.props.blogEntry.title}</a></h1>
+        <h1><a href={`/blog/${this.props.blogEntry.slug}`} itemProp="url">{this.props.blogEntry.title}</a></h1>
         <div className="meta">
           <p>
             <time itemProp="dateCreated" dateTime={`${this.props.blogEntry.pub_date}`}>

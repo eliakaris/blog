@@ -7,7 +7,7 @@ exports[`<BlogEntry /> tests renders a snapshot of a blog entry 1`] = `
   <article>
     <h1>
       <a
-        href="/test-blog-entry"
+        href="/blog/test-blog-entry"
         itemProp="url"
       >
         test blog entry
