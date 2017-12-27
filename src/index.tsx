@@ -5,8 +5,10 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from './store';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+
+import 'startbootstrap-clean-blog/vendor/bootstrap/css/bootstrap.min.css';
+import 'startbootstrap-clean-blog/vendor/font-awesome/css/font-awesome.min.css';
+import 'startbootstrap-clean-blog/css/clean-blog.min.css';
 
 import './index.css';
 
