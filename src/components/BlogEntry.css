@@ -1,11 +1,13 @@
 article
 {
     width: 720px;
+    margin: auto;
 }
 
 article img
 {
     display: block;
     padding: 5px;
-    max-width: 720px
+    max-width: 720px;
+    border: 1px solid #ccc;
 }

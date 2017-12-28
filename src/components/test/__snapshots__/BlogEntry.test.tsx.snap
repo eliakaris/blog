@@ -2,7 +2,7 @@
 
 exports[`<BlogEntry /> tests renders a snapshot of a blog entry 1`] = `
 <div
-  className="container"
+  className="row"
 >
   <article>
     <h1>
@@ -23,7 +23,7 @@ exports[`<BlogEntry /> tests renders a snapshot of a blog entry 1`] = `
         >
           December 26th 2017
         </time>
-        ∙
+         ∙ 
         <a
           href="https://github.com/eliakaris/blog/tree/master/server/data/posts/test-blog-entry.md"
         >
