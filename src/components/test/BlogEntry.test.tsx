@@ -19,7 +19,6 @@ describe('<BlogEntry /> tests', () => {
       html: "<div>hi there</div>",
       slug: "test-blog-entry",
       title: "test blog entry",
-      summary: "summary for test blog entry",
       pretty_pub_date: "December 26th 2017",
       pub_date: "20171226"
     };

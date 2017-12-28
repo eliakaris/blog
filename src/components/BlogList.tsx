@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
 import { BlogListEntry } from '../types/BlogEntry';
+import BlogListItem from './BlogListItem';
 
 export interface Props {
   blogEntries: BlogListEntry[];
@@ -17,19 +17,18 @@ class BlogList extends React.Component<Props> {
         var year = new Date(blogItem.pub_date).getFullYear();
         if (!years[year]) {
           years[year] = true;
-          blogItems.push(<h2 key={year}>{year}</h2>);
+          blogItems.push(<h1 key={year}>{year}</h1>);
         }
 
-        blogItems.push(<li key={blogItem.slug}><NavLink to={`/blog/${blogItem.slug}`}>{blogItem.title}</NavLink></li>);
+        blogItems.push(<BlogListItem blogItem={blogItem} />);
+        blogItems.push(<hr />);
       });
     }
 
     return (
-      <div>
-        <ul>
-          {blogItems}
-        </ul>
-    </div>
+      <div className="col-lg-8 col-md-10 mx-auto">
+        {blogItems}
+      </div>
     );
   }
 }

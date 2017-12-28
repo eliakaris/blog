@@ -12,7 +12,6 @@ export function blogEntry(
     pretty_pub_date: '',
     pub_date: '',
     slug: '',
-    summary: '',
     title: ''
   },
   action: RequestBlogEntryAction): BlogEntryData {

@@ -23,7 +23,9 @@ describe('<BlogList /> tests', () => {
     const blogEntry: BlogListEntry = {
       slug: "test-blog-entry",
       title: "test blog entry",
-      pub_date: "20171226"
+      pub_date: "20171226",
+      pretty_pub_date: "December 26th, 2017",
+      summary: "this is a summary text"
     };
 
     const blogEntries = [
@@ -37,13 +39,17 @@ describe('<BlogList /> tests', () => {
     const blogEntry1: BlogListEntry = {
       slug: "test-blog-entry-1",
       title: "test blog entry 1",
-      pub_date: "20171226"
+      pub_date: "20171226",
+      pretty_pub_date: "December 26th, 2017",
+      summary: "this is a summary text 1"
     };
 
     const blogEntry2: BlogListEntry = {
       slug: "test-blog-entry-2",
       title: "test blog entry 2",
-      pub_date: "20171225"
+      pub_date: "20171225",
+      pretty_pub_date: "December 25th, 2017",
+      summary: "this is a summary text 2"
     };
 
     const blogEntries = [

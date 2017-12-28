@@ -7,6 +7,8 @@ exports.blogList = function (req, res) {
           slug: e.slug,
           title: e.title,
           pub_date: e.pub_date,
+          pretty_pub_date: e.pretty_pub_date,
+          summary: e.summary
         }
       }));
 };

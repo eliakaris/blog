@@ -1,52 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BlogList /> tests renders a snapshot of a multiple entry blog list 1`] = `
-<div>
-  <ul>
-    <h2 />
-    <li>
-      <NavLink
-        activeClassName="active"
-        ariaCurrent="true"
-        to="/blog/test-blog-entry-1"
-      >
-        test blog entry 1
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        activeClassName="active"
-        ariaCurrent="true"
-        to="/blog/test-blog-entry-2"
-      >
-        test blog entry 2
-      </NavLink>
-    </li>
-  </ul>
+<div
+  className="col-lg-8 col-md-10 mx-auto"
+>
+  <h1 />
+  <BlogListItem
+    blogItem={
+      Object {
+        "pretty_pub_date": "December 26th, 2017",
+        "pub_date": "20171226",
+        "slug": "test-blog-entry-1",
+        "summary": "this is a summary text 1",
+        "title": "test blog entry 1",
+      }
+    }
+  />
+  <hr />
+  <BlogListItem
+    blogItem={
+      Object {
+        "pretty_pub_date": "December 25th, 2017",
+        "pub_date": "20171225",
+        "slug": "test-blog-entry-2",
+        "summary": "this is a summary text 2",
+        "title": "test blog entry 2",
+      }
+    }
+  />
+  <hr />
 </div>
 `;
 
 exports[`<BlogList /> tests renders a snapshot of a single entry blog list 1`] = `
-<div>
-  <ul>
-    <h2 />
-    <li>
-      <NavLink
-        activeClassName="active"
-        ariaCurrent="true"
-        to="/blog/test-blog-entry"
-      >
-        test blog entry
-      </NavLink>
-    </li>
-  </ul>
+<div
+  className="col-lg-8 col-md-10 mx-auto"
+>
+  <h1 />
+  <BlogListItem
+    blogItem={
+      Object {
+        "pretty_pub_date": "December 26th, 2017",
+        "pub_date": "20171226",
+        "slug": "test-blog-entry",
+        "summary": "this is a summary text",
+        "title": "test blog entry",
+      }
+    }
+  />
+  <hr />
 </div>
 `;
 
 exports[`<BlogList /> tests renders a snapshot of empty blog list 1`] = `
-<div>
-  <ul>
-    
-  </ul>
+<div
+  className="col-lg-8 col-md-10 mx-auto"
+>
+  
 </div>
 `;

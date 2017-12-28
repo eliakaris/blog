@@ -25,9 +25,11 @@ var loadBlogEntries = function() {
 
     var data = fs.readFileSync(path.resolve(postsDirectory, entry.slug + '.md'), 'utf8');
     entryDetails.html = marked(data);
-    entryDetails.summary = S(entryDetails.html).stripTags().truncate(200).toString();
     entryDetails.slug = entry.slug;
     entryDetails.title = entry.title;
+    
+    entry.summary = S(entryDetails.html).stripTags().truncate(200).toString();
+    entry.pretty_pub_date = entryDetails.pretty_pub_date;
     blogData[entry.slug] = entryDetails;
   }
 
