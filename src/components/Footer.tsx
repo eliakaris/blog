@@ -9,7 +9,8 @@ function NavigationHeader() {
         <span
             itemProp="address"
             itemScope={true}
-            itemType="http://data-vocabulary.org/Address">
+            itemType="http://data-vocabulary.org/Address"
+        >
           <span itemProp="locality">Seattle</span>, 
           <span itemProp="region">Washington</span>
         </span>
@@ -23,16 +24,16 @@ function NavigationHeader() {
               <li className="list-inline-item">
                 <a href="http://twitter.com/eliakaris">
                   <span className="fa-stack fa-lg">
-                    <i className="fa fa-circle fa-stack-2x"></i>
-                    <i className="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i className="fa fa-circle fa-stack-2x" />
+                    <i className="fa fa-twitter fa-stack-1x fa-inverse" />
                   </span>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="https://github.com/eliakaris/blog">
                   <span className="fa-stack fa-lg">
-                    <i className="fa fa-circle fa-stack-2x"></i>
-                    <i className="fa fa-github fa-stack-1x fa-inverse"></i>
+                    <i className="fa fa-circle fa-stack-2x" />
+                    <i className="fa fa-github fa-stack-1x fa-inverse" />
                   </span>
                 </a>
               </li>

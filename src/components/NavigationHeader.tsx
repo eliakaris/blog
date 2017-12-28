@@ -7,12 +7,15 @@ import {
   NavbarBrand,
   NavbarToggler } from 'reactstrap';
 
-  interface State {
-    isOpen: boolean;
-  }
+interface State {
+  isOpen: boolean;
+}
 
-class NavigationHeader extends React.Component<any, State> {
-  constructor(props: any) {
+interface Props {
+}
+
+class NavigationHeader extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = { isOpen: false };
   }

@@ -51,7 +51,7 @@ export type RequestBlogEntryAction = RequestBlogEntry | RequestBlogEntrySuccess 
 export function getBlogEntry(slug: string) {
   return (dispatch: Dispatch<RequestBlogEntryAction>) => {
     dispatch({ type: constants.REQUEST_BLOG_ENTRY });
-    if (!slug || slug.length == 0) {
+    if (!slug || slug.length === 0) {
       slug = 'latest';
     }
 

@@ -9,6 +9,7 @@ export interface Props {
 class BlogEntry extends React.Component<Props> {
 
   render() {
+    const postRoot = 'https://github.com/eliakaris/blog/tree/master/server/data/posts';
     return (
       this.props && this.props.blogEntry && 
       (
@@ -21,7 +22,7 @@ class BlogEntry extends React.Component<Props> {
                 {this.props.blogEntry.pretty_pub_date}
               </time>
               &nbsp;∙&nbsp;
-              <a href={`https://github.com/eliakaris/blog/tree/master/server/data/posts/${this.props.blogEntry.slug}.md`}>
+              <a href={`${postRoot}/${this.props.blogEntry.slug}.md`}>
                 History
               </a>
             </p>
