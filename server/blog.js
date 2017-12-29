@@ -45,6 +45,7 @@ var loadBlogEntries = function() {
 
 exports.init = function() {
   marked.setOptions({
+    langPrefix: 'hljs ',
     highlight: function (code, lang) {
       return hljs.highlight(lang, code).value;
     }

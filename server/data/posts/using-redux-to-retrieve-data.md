@@ -13,7 +13,7 @@ To start, we have three actions:
 
 We have a helper method in [src/actions/index.tsx](https://github.com/eliakaris/blog/blob/master/src/actions/index.tsx), getBlogEntries().  This method does three important things:
 1. Dispactes an event that the request has started (RequestBlogEntries)
-1. Perfrorms the htpt get to /api/blog
+1. Perfrorms the http get to /api/blog
 1. When the response returns, fires either RequestBlogEntriesSuccess or RequestBlogEntriesFailure.
 
 Here is the method in its entirety:

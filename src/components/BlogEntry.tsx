@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BlogEntryData } from '../types/BlogEntry';
 import './BlogEntry.css';
+import 'highlight.js/styles/github.css';
 
 export interface Props {
   blogEntry: BlogEntryData;
