@@ -5,7 +5,7 @@ import './About.css';
 function About() {
   return (
     <div>
-      <img className="me" src="/img/me2.jpg" />
+      <img className="me" src="/img/me3.jpg" />
       <h2>About me</h2>
       <p>Hey there. My name is Elia Karagiannis and I live in Seattle, Washington.</p>
 
