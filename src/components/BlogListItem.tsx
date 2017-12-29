@@ -8,7 +8,7 @@ export interface Props {
 
 function BlogListItem({ blogItem }: Props) {
   return (
-    <div className="post-preview" key={blogItem.slug}>
+    <div className="post-preview">
       <NavLink to={`/blog/${blogItem.slug}`}>
         <h2 className="post-title">{blogItem.title}</h2>
         <h3 className="post-subtitle" dangerouslySetInnerHTML={{__html: blogItem.summary}} />

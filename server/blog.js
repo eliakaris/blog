@@ -28,7 +28,7 @@ var loadBlogEntries = function() {
     entryDetails.slug = entry.slug;
     entryDetails.title = entry.title;
     
-    entry.summary = S(entryDetails.html).stripTags().truncate(200).toString();
+    entry.summary = S(entryDetails.html).stripTags().truncate(170).toString();
     entry.pretty_pub_date = entryDetails.pretty_pub_date;
     blogData[entry.slug] = entryDetails;
   }
