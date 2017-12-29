@@ -16,3 +16,7 @@ pre {
   font-size: 13px;
   font-family: Courier New, Courier, monospace;
 }
+
+header.masthead .site-heading {
+  padding: 120px 0;
+}
