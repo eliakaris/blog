@@ -31,19 +31,19 @@ The first thing to do is to go to www.windowsazure.com and sign into the portal.
 
 After logging in, you'll need to create a new site.  I'm going to create a new blog site as part of this post.  
 
-![Creating the site](/img/AzureBlog1.png)
+![Creating the site](/img/node-js-on-azure/AzureBlog1.png)
 
 A wizard will pop up and require a few simple things like site name.  The important thing to note here is, check the "Publish from source control" box.
 
-![Specify site name](/img/AzureBlog2.png)
+![Specify site name](/img/node-js-on-azure/AzureBlog2.png)
 
 Next you'll need to select the source control provider.  GitHub is in there, so select that.  When you click next, you'll be asked to give your github credentials.
 
-![Select the source code provider](/img/AzureBlog3.png)
+![Select the source code provider](/img/node-js-on-azure/AzureBlog3.png)
 
 WindowsAzure will authenticate and enumerate your projects.  Select the project and branch and continue.
 
-![Select the project](/img/AzureBlog4.png)
+![Select the project](/img/node-js-on-azure/AzureBlog4.png)
 
 After continuing, you are good to go!
 
@@ -52,13 +52,13 @@ Verifying the site
 
 To verify your site is created click the "Web Sites" tab on the left.
 
-![Verfiy the site is created](/img/AzureBlog5.png)
+![Verfiy the site is created](/img/node-js-on-azure/AzureBlog5.png)
 
 Next check out the deployment of your newly created site.  This may take around 15 seconds.  Azure automatically determines that you are using node.js, sees packages.js, pulls down the npm packages, and starts your server.
 
 After it is done, you are good to go!  Click the link and see your blog.
 
-![Check out the deployment!](/img/AzureBlog6.png)
+![Check out the deployment!](/img/node-js-on-azure/AzureBlog6.png)
 
 There you go, my first blog post on something.
 

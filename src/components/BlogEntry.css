@@ -9,5 +9,6 @@ article img
     display: block;
     padding: 5px;
     max-width: 720px;
-    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #ccc;
 }

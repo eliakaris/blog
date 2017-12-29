@@ -5,13 +5,13 @@ import './About.css';
 function About() {
   return (
     <div>
-      <img className="me" src="/img/me3.jpg" />
+      <img className="me" src="/img/me.png" />
       <h2>About me</h2>
       <p>Hey there. My name is Elia Karagiannis and I live in Seattle, Washington.</p>
 
       <h2>Professional</h2>
-      <p>I'm a software developer at Pinterest working on advertiser partner experiences.
-        I've previously worked at Microsoft for 10 years until 2017.
+      <p>I'm a software development manager at Pinterest Seattle.  My team works on partner advertiser experiences.
+        I previously worked at Microsoft for 10 years until 2017.
         Before that I worked in the bay area as a developer and before that in Springfield, MO.
       </p>
 
