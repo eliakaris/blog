@@ -48,5 +48,10 @@
     "title": "Using redux to retrieve data",
     "slug": "using-redux-to-retrieve-data",
     "pub_date": "2017-12-28 00:00:00"
+  },
+  {
+    "title": "Running unit tests in docker build",
+    "slug": "running-unit-tests-in-docker-build",
+    "pub_date": "2018-01-01 00:00:00"
   }
 ]
