@@ -17,7 +17,12 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+ENV CI True
+RUN npm test
+
 RUN npm run build
+
 ENV PORT 80
 EXPOSE 2222 80
 CMD [ "bash", "/usr/src/app/bin/init.sh" ]
