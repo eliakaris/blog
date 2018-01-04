@@ -6,6 +6,6 @@ I've updated the site (with this blog post's change) to use Twitter bootstrap as
 
 The hardest part seems to be deciding on how to incorporate bootstrap.  I still dont think I have the best way to do it.
 
-There appear to be two ways to do this: 1) Using the bootstrap nmp package. 2) Use bower which is a web dependency framework.
+There appear to be two ways to do this: 1) Using the bootstrap npm package. 2) Use bower which is a web dependency framework.
 
 I've decided to just go with the npm solution for now.
