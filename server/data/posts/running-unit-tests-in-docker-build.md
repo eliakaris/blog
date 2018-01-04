@@ -12,15 +12,6 @@ There are many ways to achieve this goal, but the easiest I've found so far is t
 FROM node
 WORKDIR /usr/src/app
 
-# ------------------------
-# SSH Server support
-# ------------------------
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends openssh-server \
-    && echo "root:Docker!" | chpasswd
-
-COPY ssh/sshd_config /etc/ssh/
-
 COPY bin/init.sh bin/
 RUN chmod 755 bin/init.sh
 
