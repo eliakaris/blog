@@ -38,5 +38,3 @@ NOTE, the setting of the environment CI=true.  If this environment variable is s
 If the tests fail, then the docker image build will fail.
 
 Here's the [commit](https://github.com/eliakaris/blog/commit/917600bc011df4965ba59a116c41b795325a64c2) that enabled the tests in our build.
-
-Next up I will look at running integration tests of the running server.
