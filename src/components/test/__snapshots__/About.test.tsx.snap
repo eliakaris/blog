@@ -10,7 +10,7 @@ exports[`<About /> tests renders a snapshot 1`] = `
     About me
   </h2>
   <p>
-    Hey there. My name is Elia Karagiannis and I live in Seattle, Washington.
+    Hi there. My name is Elia Karagiannis and I live in Seattle, Washington.
   </p>
   <h2>
     Professional
