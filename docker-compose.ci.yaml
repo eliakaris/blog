@@ -5,8 +5,6 @@ services:
     image: eliakaris/blog
     volumes:
     - ./.output:/usr/src/app/.output
-    links:
-    - selenium
     depends_on:
     - selenium
   selenium:
