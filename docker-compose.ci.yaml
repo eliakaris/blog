@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: eliakaris/blog
+    volumes:
+    - ./.output:/usr/src/app/.output
+    links:
+    - selenium
+    depends_on:
+    - selenium
+  selenium:
+    image: selenium/standalone-chrome
