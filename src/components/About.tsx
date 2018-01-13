@@ -7,7 +7,7 @@ function About() {
     <div>
       <img className="me" src="/img/me.png" />
       <h2>About me</h2>
-      <p>Hi there. My name is Elia Karagiannis and I live in Seattle, Washington.</p>
+      <p>Hey there. My name is Elia Karagiannis and I live in Seattle, Washington.</p>
 
       <h2>Professional</h2>
       <p>I'm a software development manager at Pinterest Seattle.  My team works on partner advertiser experiences.
