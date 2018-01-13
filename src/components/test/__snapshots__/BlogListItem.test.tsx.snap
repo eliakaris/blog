@@ -2,6 +2,7 @@
 
 exports[`<BlogListItem /> tests renders a snapshot 1`] = `
 <div
+  blog-slug="test-blog-entry"
   className="post-preview"
 >
   <NavLink
