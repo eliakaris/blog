@@ -32,7 +32,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "preintegration": "docker-compose -f docker-compose.ci.yaml down",
-    "integration": "docker-compose -f docker-compose.ci.yaml up --build -d && docker-compose -f docker-compose.ci.yaml exec -T web bash /usr/src/app/bin/run_tests.sh && docker-compose -f docker-compose.ci.yaml logs web >> ./.output/web_stdout.log",
+    "integration": "docker-compose -f docker-compose.ci.yaml up --build -d && docker-compose -f docker-compose.ci.yaml exec -T web bash /usr/src/app/bin/run_tests.sh",
     "postintegration": "docker-compose -f docker-compose.ci.yaml down"
   },
   "devDependencies": {
