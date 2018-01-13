@@ -32,8 +32,8 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "preintegration": "docker-compose -f docker-compose.ci.yaml down",
-    "integration": "docker-compose -f docker-compose.ci.yaml up --build -d && docker-compose -f docker-compose.ci.yaml exec -T web bash /usr/src/app/bin/run_tests.sh",
-    "postintegration": "docker-compose -f docker-compose.ci.yaml down"
+    "integration": "docker-compose -f docker-compose.ci.yaml up --build --no-color -d && docker-compose -f docker-compose.ci.yaml exec -T web bash /usr/src/app/bin/run_tests.sh",
+    "postintegration": "docker-compose -f docker-compose.ci.yaml logs --no-color -t >> ./.output/service_logs.log && docker-compose -f docker-compose.ci.yaml down"
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
