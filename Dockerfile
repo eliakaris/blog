@@ -9,14 +9,13 @@ RUN apt-get update \
     && echo "root:Docker!" | chpasswd
 
 COPY ssh/sshd_config /etc/ssh/
-
-COPY bin/init.sh bin/
-RUN chmod 755 bin/init.sh
-
 COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+RUN chmod 755 bin/init.sh
+RUN chmod 755 bin/run_tests.sh
 
 ENV CI True
 RUN npm test
