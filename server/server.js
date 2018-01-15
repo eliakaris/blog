@@ -4,8 +4,10 @@ appInsights = require("applicationinsights"),
 blog = require('./blog'),
 path = require('path');
 
-appInsights.setup();
-appInsights.start();
+if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
+  appInsights.setup();
+  appInsights.start();
+}
 
 var app = express();
 app.set('port', process.env.PORT || 3001);
