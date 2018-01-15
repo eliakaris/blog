@@ -8,7 +8,7 @@ We will use only use docker hub for storing the images.  We will use Azure only 
 
 You can use the hosted agents with Visual Studio Team Services but for the free tier, the number of minutes of build per month is limited.
 
-To remove this limitation, I use my home computer as the build server.  It has to have all prerequisite programs installed to use run the build.  These are:
+To remove this limitation, I use my home computer as the build server.  It has to have all prerequisite programs installed to run the build.  These are:
 - npm
 - docker
 - vsts build agent
@@ -83,7 +83,7 @@ Clicking the Triggers tab shows the configurations.
 Continuous integration:
 ![continuous integration trigger](/img/integrating-with-vsts/continuous-integration-trigger.png)
 
-Pull request;
+Pull request:
 ![pull request trigger](/img/integrating-with-vsts/pull-request-trigger.png)
 
 ### Using VSTS to release to the site
