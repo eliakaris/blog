@@ -37,26 +37,31 @@
   {
     "title": "Migrating to react js",
     "slug": "migrating-to-react",
-    "pub_date": "2017-12-25 00:00:00"
+    "pub_date": "2017-12-25 08:00:00"
   },
   {
     "title": "Migrating to docker",
     "slug": "migrating-to-docker",
-    "pub_date": "2017-12-26 00:00:00"
+    "pub_date": "2017-12-26 08:00:00"
   },
   {
     "title": "Using redux to retrieve data",
     "slug": "using-redux-to-retrieve-data",
-    "pub_date": "2017-12-28 00:00:00"
+    "pub_date": "2017-12-28 08:00:00"
   },
   {
     "title": "Running unit tests in docker build",
     "slug": "running-unit-tests-in-docker-build",
-    "pub_date": "2018-01-01 00:00:00"
+    "pub_date": "2018-01-01 08:00:00"
   },
   {
     "title": "Running integration tests",
     "slug": "running-integration-tests",
-    "pub_date": "2018-01-13 00:00:00"
+    "pub_date": "2018-01-13 08:00:00"
+  },
+  {
+    "title": "Integrating with Visual Studio Team Services",
+    "slug": "integrating-with-vsts",
+    "pub_date": "2018-01-14 08:00:00"
   }
 ]
