@@ -4,6 +4,7 @@ appInsights = require("applicationinsights"),
 blog = require('./blog'),
 path = require('path');
 
+appInsights.setup();
 appInsights.start();
 
 var app = express();
