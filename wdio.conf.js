@@ -37,7 +37,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './src/integration-tests/**/*.ts'
+        './src/integration-tests/**/*.mocha.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -165,7 +165,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: ['spec'],
+    reporters: ['spec', 'junit'],
+    reporterOptions: {
+      junit: {
+        outputDir: './.output/'
+      }
+  },
     
     //
     // Options to be passed to Mocha.
