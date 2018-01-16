@@ -63,5 +63,10 @@
     "title": "Integrating with Visual Studio Team Services",
     "slug": "integrating-with-vsts",
     "pub_date": "2018-01-14 08:00:00"
+  },
+  {
+    "title": "Publishing test results to Visual Studio Team Services",
+    "slug": "publishing-test-results-to-vsts",
+    "pub_date": "2018-01-16 08:00:00"
   }
 ]
