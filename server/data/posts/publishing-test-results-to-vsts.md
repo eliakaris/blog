@@ -4,11 +4,11 @@ With test reporting enabled, we can easily see the summary of the tests run in t
 
 Here is the summary of the tests:
 
-![tests summary](/img/public/publishing-test-results-to-vsts/test-summary.png)
+![tests summary](/img/publishing-test-results-to-vsts/test-summary.png)
 
 We can also see the details of the tests:
 
-![tests summary](/img/public/publishing-test-results-to-vsts/test-details.png)
+![tests summary](/img/publishing-test-results-to-vsts/test-details.png)
 
 ## Using the JUnit reporter
 
@@ -67,6 +67,6 @@ I modified the npm run integration script to do this:
 
 The change to the build was really simple.  Just added a Publish Test Results task and configure it.
 
-![publish test results task](/img/public/publishing-test-results-to-vsts/publish-task.png)
+![publish test results task](/img/publishing-test-results-to-vsts/publish-task.png)
 
 That's it!  Tests are running and now being reported!
