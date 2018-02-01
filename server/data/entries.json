@@ -68,5 +68,10 @@
     "title": "Publishing test results to Visual Studio Team Services",
     "slug": "publishing-test-results-to-vsts",
     "pub_date": "2018-01-16 08:00:00"
+  },
+  {
+    "title": "Using CloudFlare for https",
+    "slug": "using-cloudflare-for-https",
+    "pub_date": "2018-01-31 08:00:00"
   }
 ]
