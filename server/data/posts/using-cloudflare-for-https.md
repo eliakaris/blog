@@ -34,6 +34,4 @@ You can see we have a rule for the root domain and one for subdomains:
 - http://*eliakaris.com/*
 
 
-Thanks it for today!
-
-
+Thanks, that's it for today!
