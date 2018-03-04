@@ -1,6 +1,6 @@
 import * as constants from '../constants';
 import * as Request from 'superagent';
-import { BlogEntryData, BlogListEntry } from '../types/BlogEntry';
+import { BlogEntryData, BlogListEntry } from '../../server/BlogEntry';
 import { Dispatch } from 'react-redux';
 
 interface RequestBlogEntries {

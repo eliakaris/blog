@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BlogListEntry } from '../types/BlogEntry';
+import { BlogListEntry } from '../../server/BlogEntry';
 import BlogListItem from './BlogListItem';
 
 export interface Props {

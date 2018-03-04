@@ -1,7 +1,7 @@
 
 // src/types/index.tsx
 
-import { BlogEntryData, BlogListEntry } from "./BlogEntry";
+import { BlogEntryData, BlogListEntry } from '../../server/BlogEntry';
 
 export interface StoreState {
   blogEntry: BlogEntryData;

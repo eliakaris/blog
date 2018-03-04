@@ -2,7 +2,7 @@
 
 import { RequestBlogEntriesAction, RequestBlogEntryAction } from '../actions';
 import { StoreState } from '../types/index';
-import { BlogEntryData, BlogListEntry } from '../types/BlogEntry';
+import { BlogEntryData, BlogListEntry } from '../../server/BlogEntry';
 import * as actions from '../constants/index';
 import { combineReducers } from 'redux';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BlogListEntry } from '../types/BlogEntry';
+import { BlogListEntry } from '../../server/BlogEntry';
 
 export interface Props {
   blogItem: BlogListEntry;

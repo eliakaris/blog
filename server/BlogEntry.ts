@@ -1,5 +1,3 @@
-// src/types/BlogEntry.tsx
-
 export interface BlogEntryData {
   pretty_pub_date: string;
   html: string;
@@ -11,7 +9,13 @@ export interface BlogEntryData {
 export interface BlogListEntry {
   slug: string;
   title: string;
-  pub_date: string;
+  pub_date: Date;
   pretty_pub_date: string;
   summary: string;
+}
+
+export interface BlogData {
+  slug: string;
+  title: string;
+  pub_date: string;
 }

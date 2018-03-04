@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BlogEntryData } from '../types/BlogEntry';
+import { BlogEntryData } from '../../server/BlogEntry';
 import './BlogEntry.css';
 import 'highlight.js/styles/github.css';
 
