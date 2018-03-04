@@ -17,8 +17,9 @@ COPY . .
 RUN chmod 755 bin/init.sh
 RUN chmod 755 bin/run_tests.sh
 
+ENV TZ=US/Pacific
 ENV CI True
-RUN npm test
+RUN npm run test:unit
 
 RUN npm run build
 

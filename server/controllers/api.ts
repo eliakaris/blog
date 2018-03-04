@@ -1,8 +1,10 @@
-exports.blogList = function (req, res) {
+import * as express from 'express';
+import { BlogListEntry } from '../BlogEntry';
+
+export function blogList(req: express.Request, res: express.Response) {
   res.json(
     global.entries.map(
-      function(e) {
-
+      function(e: BlogListEntry) {
         return {
           slug: e.slug,
           title: e.title,
@@ -11,22 +13,21 @@ exports.blogList = function (req, res) {
           summary: e.summary
         }
       }));
-};
+}
 
-function getBlogEntry(slug, res) {
+function getBlogEntry(slug: string, res: express.Response) {
   var entry = global.blogData[slug];
   if (entry) {
     res.json(entry);
-  }
-  else {
+  } else {
     res.sendStatus(404);
   }
 }
 
-exports.blogEntry = function (req, res) {
+export function blogEntry(req: express.Request, res: express.Response) {
   return getBlogEntry(req.params.slug, res);
 }
 
-exports.latestBlogEntry = function (req, res) {
+export function latestBlogEntry(req: express.Request, res: express.Response) {
   return getBlogEntry(global.entries[0].slug, res);
 }
