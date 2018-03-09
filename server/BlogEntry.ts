@@ -19,3 +19,10 @@ export interface BlogData {
   title: string;
   pub_date: string;
 }
+
+// tslint:disable-next-line:interface-name
+export interface IBlogProvider {
+  getBlogEntries(): BlogListEntry[];
+  getLatestEntry(): BlogEntryData;
+  getEntryFromSlug(slug: string): BlogEntryData;
+}

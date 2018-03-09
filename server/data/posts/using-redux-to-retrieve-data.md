@@ -13,7 +13,7 @@ To start, we have three actions:
 
 We have a helper method in [src/actions/index.tsx](https://github.com/eliakaris/blog/blob/master/src/actions/index.tsx), getBlogEntries().  This method does three important things:
 1. Dispactes an event that the request has started (RequestBlogEntries)
-1. Perfrorms the http get to /api/blog
+1. Perfrorms the http get to /api/v1/blog
 1. When the response returns, fires either RequestBlogEntriesSuccess or RequestBlogEntriesFailure.
 
 Here is the method in its entirety:
@@ -22,7 +22,7 @@ Here is the method in its entirety:
 export function getBlogEntries() {
   return (dispatch: Dispatch<RequestBlogEntriesAction>) => {
     dispatch({ type: constants.REQUEST_BLOG_ENTRIES });
-    Request.get('/api/blog').then(
+    Request.get('/api/v1/blog').then(
       (response) => {
         dispatch({ type: constants.REQUEST_BLOG_ENTRIES_SUCCESS, blogEntries: response.body});
       },

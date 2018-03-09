@@ -22,7 +22,7 @@ export type RequestBlogEntriesAction = RequestBlogEntries | RequestBlogEntriesSu
 export function getBlogEntries() {
   return (dispatch: Dispatch<RequestBlogEntriesAction>) => {
     dispatch({ type: constants.REQUEST_BLOG_ENTRIES });
-    Request.get('/api/blog').then(
+    Request.get('/api/v1/blog').then(
       (response) => {
         dispatch({ type: constants.REQUEST_BLOG_ENTRIES_SUCCESS, blogEntries: response.body});
       },
@@ -55,7 +55,7 @@ export function getBlogEntry(slug: string) {
       slug = 'latest';
     }
 
-    Request.get(`/api/blog/${slug}`).then(
+    Request.get(`/api/v1/blog/${slug}`).then(
       (response) => {
         dispatch({ type: constants.REQUEST_BLOG_ENTRY_SUCCESS, blogEntry: response.body});
       },

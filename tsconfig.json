@@ -9,6 +9,8 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,

@@ -46,9 +46,9 @@ Luckily, the Typescript react community is also very vibrant.  There are typings
 The previous site was all server side rendered.  With the new site being client side rendered, a new API had to be exposed to allow the client to retrieve blog entry lists and blog entry contents.
 
 This API is very simple:
-- /api/blog returns a list of blog entries
-- /api/blog/<slug> returns a single blog entry json object.
-- /api/blog/latest returns the contents of the latest blog entry.
+- /api/v1/blog returns a list of blog entries
+- /api/v1/blog/<slug> returns a single blog entry json object.
+- /api/v1/blog/latest returns the contents of the latest blog entry.
 
 You can see the definition of the API [here](https://github.com/eliakaris/blog/blob/master/server/controllers/api.js).
 

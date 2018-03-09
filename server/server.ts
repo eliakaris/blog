@@ -1,20 +1,24 @@
-import * as express from 'express';
+import 'reflect-metadata';
 import * as routes from './routes';
 import * as appInsights from 'applicationinsights';
-import * as blog from './blog';
+import { InversifyExpressServer } from 'inversify-express-utils';
+import { container } from './ioc/ioc-container';
+import './controllers';
 
 if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
   appInsights.setup();
   appInsights.start();
 }
 
-var app = express();
+const server = new InversifyExpressServer(container);
+server.setConfig(a => {
+  routes.init(a);
+});
+
+const app = server.build();
 app.set('port', process.env.PORT || 3001);
 
-blog.init();
-routes.init(app);
-
 console.log('Going to try port ' + app.get('port'));
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), () => {
   console.log('Express server listening on port ' + app.get('port'));
 });
