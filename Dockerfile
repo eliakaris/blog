@@ -12,7 +12,11 @@ COPY ssh/sshd_config /etc/ssh/
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+COPY public public
+COPY server server
+COPY src src
+COPY bin bin
+COPY *.* ./
 
 RUN chmod 755 bin/init.sh
 RUN chmod 755 bin/run_tests.sh
