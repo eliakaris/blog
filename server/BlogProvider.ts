@@ -23,19 +23,19 @@ export class BlogProvider implements IBlogProvider {
         return hljs.highlight(lang, code).value;
       }
     });
-  
-    fs.watchFile(entriesFilename, this.loadBlogEntries);
-    this.loadBlogEntries();
+
+    fs.watchFile(entriesFilename, () => this.loadBlogEntries());
+    this.loadBlogEntries(); 
   }
 
   loadBlogEntries() {
-    const entriesJson = fs.readFileSync(entriesFilename);
-    const entries = JSON.parse(entriesJson.toString()) as Array<BlogData>;
+    const entriesJson = fs.readFileSync(entriesFilename).toString();
+    const entriesArray = JSON.parse(entriesJson) as Array<BlogData>;
   
-    const blogData = {};
-    const blogEntries: Array<BlogListEntry> = [];
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
+    const newBlogData = {};
+    const newBlogEntries: Array<BlogListEntry> = [];
+    for (let i = 0; i < entriesArray.length; i++) {
+      const entry = entriesArray[i];
       const slug = entry.slug;
       const title = entry.title;
       const pubDate = new Date(entry.pub_date);
@@ -45,7 +45,7 @@ export class BlogProvider implements IBlogProvider {
       const html = marked(data);
       
       const summary = S(html).stripTags().truncate(170).toString();
-      blogData[slug] = {
+      newBlogData[slug] = {
         pretty_pub_date: prettyPubDate,
         pub_date: pubDate,
         html,
@@ -53,7 +53,7 @@ export class BlogProvider implements IBlogProvider {
         title,
       };
   
-      blogEntries.push({
+      newBlogEntries.push({
         slug,
         title,
         pub_date: pubDate,
@@ -62,8 +62,8 @@ export class BlogProvider implements IBlogProvider {
       });
     }
   
-    this.blogData = blogData;
-    this.entries = blogEntries.sort(function (a: BlogListEntry, b: BlogListEntry) {
+    this.blogData = newBlogData;
+    this.entries = newBlogEntries.sort(function (a: BlogListEntry, b: BlogListEntry) {
       if (a.pub_date > b.pub_date) {
         return -1;
       }
