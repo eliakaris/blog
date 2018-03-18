@@ -12,7 +12,10 @@
     "usePathForSuiteName": "true"
   },
   "dependencies": {
+    "@types/bunyan": "^1.8.4",
     "applicationinsights": "^1.0.1",
+    "bunyan": "^1.8.12",
+    "bunyan-request": "^1.2.0",
     "compression": "^1.7.1",
     "express": "^4.16.2",
     "highlight.js": "^9.12.0",
@@ -43,7 +46,7 @@
     "build:server": "tsc -p ./server/tsconfig.json",
     "start": "npm run start:client",
     "start:client": "react-scripts-ts start",
-    "start:server": "node ./build/server/server",
+    "start:server": "node ./build/server/server | bunyan",
     "test": "npm run test:unit && npm run test:integration",
     "integration": "npm run test:integration",
     "test:unit": "cross-env CI=True npm run test:unit:client",
