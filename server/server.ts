@@ -4,14 +4,18 @@ import * as appInsights from 'applicationinsights';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import { container } from './ioc/ioc-container';
 import './controllers';
+import { bunyanLogger } from './logger';
+import { requestLogger } from './middleware';
 
 if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
   appInsights.setup();
   appInsights.start();
 }
 
+const logger = bunyanLogger();
 const server = new InversifyExpressServer(container);
 server.setConfig(a => {
+  a.use(requestLogger(logger));
   routes.init(a);
 });
 
