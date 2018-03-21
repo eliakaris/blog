@@ -12,8 +12,10 @@
     "usePathForSuiteName": "true"
   },
   "dependencies": {
+    "@types/applicationinsights-js": "^1.0.5",
     "@types/bunyan": "^1.8.4",
     "applicationinsights": "^1.0.1",
+    "applicationinsights-js": "^1.0.15",
     "bunyan": "^1.8.12",
     "bunyan-request": "^1.2.0",
     "compression": "^1.7.1",
