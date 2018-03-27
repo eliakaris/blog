@@ -3,6 +3,8 @@ services:
   web:
     build: .
     image: eliakaris/blog
+    environment:
+    - REACT_APP_INSIGHTS_KEY
     volumes:
     - ./.output:/usr/src/app/.output
     depends_on:
