@@ -53,9 +53,9 @@
     "integration": "npm run test:integration",
     "test:unit": "cross-env CI=True npm run test:unit:client",
     "test:unit:client": "react-scripts-ts test --env=jsdom --testResultsProcessor=jest-junit",
-    "test:preintegration": "docker-compose down",
     "test:integration": "docker-compose up --build --no-color -d && docker-compose exec -T web bash /usr/src/app/bin/run_tests.sh && docker-compose exec -T web cp /usr/src/app/.test_output/react-unit-tests.xml /usr/src/app/.output/",
-    "test:postintegration": "docker-compose logs --no-color -t >> ./.output/service_logs.log && docker-compose down"
+    "pretest:integration": "docker-compose down",
+    "posttest:integration": "docker-compose logs --no-color -t >> ./.output/service_logs.log && docker-compose down"
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
