@@ -25,6 +25,10 @@ ENV TZ=US/Pacific
 ENV CI True
 RUN npm run test:unit
 
+ARG REACT_APP_INSIGHTS_KEY
+ENV REACT_APP_INSIGHTS_KEY=$REACT_APP_INSIGHTS_KEY
+
+RUN printenv
 RUN npm run build
 
 ENV PORT 80
