@@ -16,6 +16,7 @@ import './index.css';
 if (process.env.REACT_APP_INSIGHTS_KEY) {
   if (AppInsights && AppInsights.downloadAndSetup) {
     AppInsights.downloadAndSetup({ instrumentationKey: process.env.REACT_APP_INSIGHTS_KEY });
+    AppInsights.trackPageView();
   }
 }
 
