@@ -78,5 +78,10 @@
     "title": "Inversify.js",
     "slug": "inversify",
     "pub_date": "2018-03-14 08:00:00"
+  },
+  {
+    "title": "Adding instrumentation",
+    "slug": "instrumentation-with-application-insights",
+    "pub_date": "2018-04-17 08:00:00"
   }
 ]
