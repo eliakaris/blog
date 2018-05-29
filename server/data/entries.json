@@ -82,6 +82,11 @@
   {
     "title": "Adding instrumentation",
     "slug": "instrumentation-with-application-insights",
-    "pub_date": "2018-04-17 08:00:00"
+    "pub_date": "2018-04-16 08:00:00"
+  },
+  {
+    "title": "Application Insights Dashboards in VSTS",
+    "slug": "application-insights-dashboards-in-vsts",
+    "pub_date": "2018-05-29 08:00:00"
   }
 ]
