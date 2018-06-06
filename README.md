@@ -16,3 +16,7 @@ After cloning the project run the following from the project root to run locally
 
 To run tests run:
 - npm run test
+
+## Build status
+
+[![Build Status](https://nextline.visualstudio.com/_apis/public/build/definitions/f5929b14-1593-4039-8984-a92fe4eea9a6/37/badge)](https://nextline.visualstudio.com/Blog/_build/index?definitionId=37)
