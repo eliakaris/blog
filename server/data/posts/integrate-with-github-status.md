@@ -69,3 +69,23 @@ That should be it!
 Every pull request will kick of a VSTS build and update the Github status check with its status.
 
 Once a build is successful, a merge will be allowed.
+
+### Viewing it in action
+
+The [pull request](https://github.com/eliakaris/blog/pull/29) for this blog entry kicked off a build.
+
+Here's the status check in Github:
+
+![Github status check](/img/integrate-with-github-status/waiting-on-build.png)
+
+Here's the VSTS build:
+
+![VSTS build running](/img/integrate-with-github-status/vsts-build.png)
+
+Here's the build completed:
+
+![VSTS build completed](/img/integrate-with-github-status/vsts-build-complete.png)
+
+And finally the status check passed:
+
+![Github status check passed](/img/integrate-with-github-status/status-check-complete.png)
