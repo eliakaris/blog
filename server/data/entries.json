@@ -88,5 +88,10 @@
     "title": "Application Insights Dashboards in VSTS",
     "slug": "application-insights-dashboards-in-vsts",
     "pub_date": "2018-05-29 08:00:00"
+  },
+  {
+    "title": "Integrate with Github status",
+    "slug": "integrate-with-github-status",
+    "pub_date": "2018-06-13 08:00:00"
   }
 ]
