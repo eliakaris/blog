@@ -1,0 +1,6 @@
+<testsuites name="react unit tests">
+  <testsuite name="\src\components\test\About.test.tsx" errors="0" failures="0" skipped="0" timestamp="2018-12-13T05:29:33" time="3.725" tests="1">
+    <testcase classname="&lt;About /&gt; tests-renders a snapshot" name="&lt;About /&gt; tests-renders a snapshot" time="0.006">
+    </testcase>
+  </testsuite>
+</testsuites>

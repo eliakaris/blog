@@ -12,7 +12,7 @@ After cloning the project run the following from the project root to run locally
 - npm install
 - npm run start:client
 - npm run start:server (from a new shell)
-- open http://localhost:3001 from the browser of your choice
+- open http://localhost:3000 from the browser of your choice
 
 To run tests run:
 - npm run test
