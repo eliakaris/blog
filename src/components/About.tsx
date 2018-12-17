@@ -10,7 +10,7 @@ function About() {
       <p>Hi there. My name is Elia Karagiannis and I live in Seattle, Washington.</p>
 
       <h2>Professional</h2>
-      <p>I'm a software development manager at Pinterest Seattle.  My team works on partner advertiser experiences.
+      <p>I'm a software development manager at Pinterest Seattle.  My team works on content creation for web and mobile.
         I previously worked at Microsoft for 10 years until 2017.
         Before that I worked in the bay area as a developer and before that in Springfield, MO.
       </p>
