@@ -38,7 +38,7 @@ function NavigationHeader() {
                 </a>
               </li>
             </ul>
-            <p className="copyright text-muted">Copyright © Elia Karagiannis 2018</p>
+            <p className="copyright text-muted">Copyright © Elia Karagiannis 2019</p>
           </div>
         </div>
       </div>

@@ -99,7 +99,7 @@ exports[`<Footer /> tests renders a snapshot 1`] = `
         <p
           className="copyright text-muted"
         >
-          Copyright © Elia Karagiannis 2018
+          Copyright © Elia Karagiannis 2019
         </p>
       </div>
     </div>
