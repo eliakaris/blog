@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogList /> tests renders a snapshot of a multiple entry blog list 1`] = `undefined`;
+
+exports[`<BlogList /> tests renders a snapshot of a single entry blog list 1`] = `undefined`;
+
+exports[`<BlogList /> tests renders a snapshot of empty blog list 1`] = `
+<div
+  className="col-lg-8 col-md-10 mx-auto"
+>
+  
+</div>
+`;
