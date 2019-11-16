@@ -45,4 +45,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 TODO:
-useContext to create a react context for storing calls to the api?
+- useContext to create a react context for storing calls to the api?
+- fix tests
+- add app insights
+- split up server and api
+- add separate packate for server
