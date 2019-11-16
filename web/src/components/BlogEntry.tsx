@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { BlogData } from '../../../server/BlogEntry';
+import { BlogEntryData } from '../../../server/BlogEntry';
 import * as Request from 'superagent';
 import './BlogEntry.css';
 import 'highlight.js/styles/github.css';
@@ -14,7 +14,7 @@ interface BlogEntryContainerProps {
 
 function BlogEntry(props: BlogEntryContainerProps) {
   const initialData: any = null;
-  const [blogEntry, setBlogEntry] = useState(initialData);
+  const [blogEntry, setBlogEntry] = useState<BlogEntryData>(initialData);
 
   useEffect(() => {
     const slug = props.match.params.slug || 'latest';

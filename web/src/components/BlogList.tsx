@@ -4,7 +4,7 @@ import BlogListItem from './BlogListItem';
 import * as Request from 'superagent';
 
 function BlogList() {
-  const [blogEntries, setBlogEntries] = useState([] as BlogListEntry[]);
+  const [blogEntries, setBlogEntries] = useState<BlogListEntry[]>([]);
   useEffect(() => {
     Request.get('http://localhost:3001/api/v1/blog').then(
       (response) => {
@@ -17,7 +17,7 @@ function BlogList() {
   if (blogEntries && blogEntries.length > 0) {
     var years: any;
     years = {};
-    blogEntries.map((blogItem) => {
+    blogEntries.forEach((blogItem) => {
       var year = new Date(blogItem.pub_date).getFullYear();
       if (!years[year]) {
         years[year] = true;
