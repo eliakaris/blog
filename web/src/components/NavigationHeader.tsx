@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { NavLink } from '../packages/react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Collapse,
   Nav,
   NavItem,
   NavbarBrand,
-  NavbarToggler } from '../packages/reactstrap';
+  NavbarToggler } from 'reactstrap';
 
 function NavigationHeader() {
   const [isOpen, setIsOpen] = useState(false);
