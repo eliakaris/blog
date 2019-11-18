@@ -7,8 +7,8 @@ import * as S from 'string';
 import { IBlogProvider, BlogData, BlogListEntry, BlogEntryData } from './BlogEntry';
 import { injectable } from './ioc';
 
-const entriesFilename = path.resolve(__dirname, '../../server/data/entries.json');
-const postsDirectory = path.resolve(__dirname, '../../server/data/posts');
+const entriesFilename = path.resolve(__dirname, './data/entries.json');
+const postsDirectory = path.resolve(__dirname, './data/posts');
 
 @injectable()
 export class BlogProvider implements IBlogProvider {

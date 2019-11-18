@@ -6,6 +6,10 @@ node_modules/**/*
 
 # production
 /build
+/server/build
+
+server/build/
+server/node_modules/
 
 # misc
 .DS_Store
