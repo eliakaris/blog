@@ -1,13 +1,25 @@
-import * as React from 'react';
+import React from 'react';
 import BlogEntry from '../BlogEntry';
 import * as ShallowRenderer from 'react-test-renderer/shallow';
 import { BlogEntryData } from '../../../../server/BlogEntry';
+import * as API from '../../api';
+import * as ReactRouterDom from 'react-router-dom';
 
 describe('<BlogEntry /> tests', () => {
   let renderer: ShallowRenderer.ShallowRenderer;
+  let useEffect;
+
+  const mockUseEffect = () => {
+    useEffect.mockImplementationOnce(f => f());
+  };
 
   beforeAll(() => {
     renderer = ShallowRenderer.createRenderer();
+  });
+
+  beforeEach(() => {
+    useEffect = jest.spyOn(React, "useEffect");
+    mockUseEffect();
   });
 
   it('renders a snapshot of a blog entry', () => {
@@ -19,7 +31,19 @@ describe('<BlogEntry /> tests', () => {
       pub_date: '20171226'
     };
 
-    const component = renderer.render(<BlogEntry blogEntry={blogEntry} />);
+    const props = {
+      match: {
+        params: {
+          slug: 'test-blog-entry',
+        },
+      },
+    };
+
+    jest.spyOn(API, 'fetchBlogPost').mockReturnValue(Promise.resolve(blogEntry));
+
+    const component = renderer.render(<BlogEntry {...props} />);
+
+    // TODO: properly test snapshot
     expect(component).toMatchSnapshot();
   });
 });

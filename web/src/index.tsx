@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 import 'startbootstrap-clean-blog/vendor/bootstrap/css/bootstrap.min.css';
-import 'startbootstrap-clean-blog/vendor/font-awesome/css/font-awesome.min.css';
+import 'startbootstrap-clean-blog/vendor/fontawesome-free/css/fontawesome.min.css';
 import 'startbootstrap-clean-blog/css/clean-blog.min.css';
 
 import './index.css';

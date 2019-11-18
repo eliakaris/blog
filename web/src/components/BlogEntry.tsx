@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { BlogEntryData } from '../../../server/BlogEntry';
-import * as Request from 'superagent';
 import './BlogEntry.css';
+import * as API from '../api';
 import 'highlight.js/styles/github.css';
 
 interface BlogEntryContainerProps {
@@ -13,20 +13,16 @@ interface BlogEntryContainerProps {
 }
 
 function BlogEntry(props: BlogEntryContainerProps) {
-  const initialData: any = null;
-  const [blogEntry, setBlogEntry] = useState<BlogEntryData>(initialData);
+  const [blogEntry, setBlogEntry] = useState<BlogEntryData>();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const slug = props.match.params.slug || 'latest';
-    Request.get(`http://localhost:3001/api/v1/blog/${slug}`).then(
-      (response) => {
-        setBlogEntry(response.body);
-      });
-  });
+    API.fetchBlogPost(slug).then(setBlogEntry);
+  }, []);
 
   const postRoot = 'https://github.com/eliakaris/blog/tree/master/server/data/posts';
   return (
-    blogEntry && 
+    blogEntry ?
     (
     <article>
       <h1><a href={`/blog/${blogEntry.slug}`} itemProp="url">{blogEntry.title}</a></h1>
@@ -43,7 +39,7 @@ function BlogEntry(props: BlogEntryContainerProps) {
       </div>
       <div dangerouslySetInnerHTML={{__html: blogEntry.html}} />
     </article>
-    )
+    ) : null
   );
 };
 

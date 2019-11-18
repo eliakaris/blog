@@ -46,35 +46,29 @@ exports[`<NavigationHeader /> tests renders a snapshot 1`] = `
         <NavItem
           tag="li"
         >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
+          <ForwardRef
             to="/"
           >
             Home
-          </NavLink>
+          </ForwardRef>
         </NavItem>
         <NavItem
           tag="li"
         >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
+          <ForwardRef
             to="/about"
           >
             About
-          </NavLink>
+          </ForwardRef>
         </NavItem>
         <NavItem
           tag="li"
         >
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
+          <ForwardRef
             to="/blog"
           >
             Archive
-          </NavLink>
+          </ForwardRef>
         </NavItem>
       </Nav>
     </Collapse>

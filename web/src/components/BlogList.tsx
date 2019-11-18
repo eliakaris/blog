@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BlogListEntry } from '../../../server/BlogEntry';
 import BlogListItem from './BlogListItem';
-import * as Request from 'superagent';
+import * as API from '../api';
 
 function BlogList() {
   const [blogEntries, setBlogEntries] = useState<BlogListEntry[]>([]);
-  useEffect(() => {
-    Request.get('http://localhost:3001/api/v1/blog').then(
-      (response) => {
-        setBlogEntries(response.body);
-      });
-  });
+  React.useEffect(() => {
+    API.fetchBlogListings().then(setBlogEntries);
+  }, [blogEntries]);
 
   var blogItems: JSX.Element[];
   blogItems = [];
