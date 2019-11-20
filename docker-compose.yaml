@@ -2,13 +2,32 @@ version: '3'
 services:
   web:
     build:
-      context: .
+      context: ./web
       args:
         - BUILD_REACT_APP_INSIGHTS_KEY=$REACT_APP_INSIGHTS_KEY
+        - BUILD_REACT_APP_API_URL=http://localhost:3001/
+    ports:
+      - "3000:3000"
     image: eliakaris/blog
     volumes:
     - ./.output:/usr/src/app/.output
     depends_on:
-      - selenium
+      - server
+  server:
+    build:
+      context: ./server
+    image: eliakaris/server
+    ports:
+      - "3001:3001"
+  prod:
+    build:
+      context: ./reverse-proxy
+    ports:
+      - "8080:8080"
+    image: eliakaris/prod-proxy
+    restart: always
+    depends_on:
+      - web
+      - server
   selenium:
     image: selenium/standalone-chrome
