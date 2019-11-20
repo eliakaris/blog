@@ -1,15 +1,7 @@
 {
-  "name": "blog",
+  "name": "blog-server",
   "version": "0.1.0",
   "private": true,
-  "jest-junit": {
-    "suiteName": "react unit tests",
-    "output": "./.test_output/react-unit-tests.xml",
-    "classNameTemplate": "{classname}-{title}",
-    "titleTemplate": "{classname}-{title}",
-    "ancestorSeparator": " › ",
-    "usePathForSuiteName": "true"
-  },
   "dependencies": {
     "@types/applicationinsights-js": "^1.0.5",
     "@types/bunyan": "^1.8.4",

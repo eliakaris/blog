@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceRoot": "src",
     "outDir": "./build/server",
     "module": "commonjs",
     "target": "es5",

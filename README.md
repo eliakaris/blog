@@ -6,6 +6,9 @@ typescript based react and redux for the frontend.
 
 Blog entries are written in Markdown and utilize the marked library to render as html.
 
+
+## when building server, use nmv use 8
+
 ## Running locally
 
 After cloning the project run the following from the project root to run locally:
