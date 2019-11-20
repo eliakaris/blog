@@ -1,7 +1,7 @@
 import * as React from 'react';
 import BlogList from '../BlogList';
 import * as ShallowRenderer from 'react-test-renderer/shallow';
-import { BlogListEntry } from '../../../../server/BlogEntry';
+import { BlogListEntry } from '../../api';
 
 describe('<BlogList /> tests', () => {
   let renderer: ShallowRenderer.ShallowRenderer;

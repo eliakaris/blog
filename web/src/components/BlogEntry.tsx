@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BlogEntryData } from '../../../server/BlogEntry';
+import { BlogEntryData } from '../api';
 import './BlogEntry.css';
 import * as API from '../api';
 import 'highlight.js/styles/github.css';
@@ -15,10 +15,10 @@ interface BlogEntryContainerProps {
 function BlogEntry(props: BlogEntryContainerProps) {
   const [blogEntry, setBlogEntry] = useState<BlogEntryData>();
 
+  const slug = props.match.params.slug || 'latest';
   React.useEffect(() => {
-    const slug = props.match.params.slug || 'latest';
     API.fetchBlogPost(slug).then(setBlogEntry);
-  }, []);
+  }, [slug]);
 
   const postRoot = 'https://github.com/eliakaris/blog/tree/master/server/data/posts';
   return (

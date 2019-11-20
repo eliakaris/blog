@@ -1,3 +1,4 @@
+// keep in sync with client definitions at web/src/api.ts
 export interface BlogEntryData {
   pretty_pub_date: string;
   html: string;
@@ -6,6 +7,7 @@ export interface BlogEntryData {
   pub_date: string;
 }
 
+// keep in sync with client definitions at web/src/api.ts
 export interface BlogListEntry {
   slug: string;
   title: string;

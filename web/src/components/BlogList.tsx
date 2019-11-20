@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BlogListEntry } from '../../../server/BlogEntry';
+import { BlogListEntry } from '../api';
 import BlogListItem from './BlogListItem';
 import * as API from '../api';
 

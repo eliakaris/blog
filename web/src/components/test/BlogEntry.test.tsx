@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogEntry from '../BlogEntry';
 import * as ShallowRenderer from 'react-test-renderer/shallow';
-import { BlogEntryData } from '../../../../server/BlogEntry';
+import { BlogEntryData } from '../../api';
 import * as API from '../../api';
 import * as ReactRouterDom from 'react-router-dom';
 
