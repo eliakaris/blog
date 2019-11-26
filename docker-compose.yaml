@@ -5,7 +5,6 @@ services:
       context: ./web
       args:
         - BUILD_REACT_APP_INSIGHTS_KEY=$REACT_APP_INSIGHTS_KEY
-        - BUILD_REACT_APP_API_URL=http://localhost:3001/
     ports:
       - "3000:3000"
     image: eliakaris/blog

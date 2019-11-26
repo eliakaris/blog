@@ -1,14 +1,12 @@
 import * as Request from 'superagent';
 
-export const ApiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001/';
-
 export async function fetchBlogPost(slug: string) {
-  const response = await Request.get(`${ApiUrl}api/v1/blog/${slug}`);
+  const response = await Request.get(`/api/v1/blog/${slug}`);
   return response.body;
 };
 
 export async function fetchBlogListings() {
-  const response = await Request.get(`${ApiUrl}api/v1/blog`);
+  const response = await Request.get('/api/v1/blog');
   return response.body;
 };
 
