@@ -7,9 +7,9 @@ RUN npm install
 COPY public public
 COPY src src
 COPY *.* ./
-COPY bin/* ./
+COPY bin bin
 
-RUN chmod 755 init.sh
+RUN chmod 755 bin/init.sh
 
 ENV TZ=US/Pacific
 ENV CI True
@@ -22,4 +22,4 @@ RUN yarn build
 
 ENV PORT 3000
 EXPOSE 2222 3000
-CMD [ "bash", "/usr/src/app/init.sh" ]
+CMD [ "bash", "/usr/src/app/bin/init.sh" ]

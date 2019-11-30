@@ -37,7 +37,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './integration-tests/**/*.mocha.ts'
+        './src/**/*.mocha.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -85,7 +85,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'result',
+    // logLevel: 'result',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -142,7 +142,7 @@ exports.config = {
 
     visualRegression: {
       compare: new VisualRegressionCompare.LocalCompare({
-        referenceName: getScreenshotName(path.join(process.cwd(), 'src/integration-tests/screenshots')),
+        referenceName: getScreenshotName(path.join(process.cwd(), 'src/screenshots')),
         screenshotName: getScreenshotName(path.join(process.cwd(), '.output/screenshots/screen')),
         diffName: getScreenshotName(path.join(process.cwd(), '.output/screenshots/diff')),
         misMatchTolerance: 0.01,

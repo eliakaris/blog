@@ -1,5 +1,16 @@
 version: '3'
 services:
+  integration-tests:
+    build:
+      context: ./integration-tests
+    image: eliakaris/tests
+    volumes:
+      - ./.output:/usr/src/app/.output
+    ports:
+      - "3002:3002"
+    depends_on:
+      - prod
+      - selenium
   web:
     build:
       context: ./web
@@ -9,7 +20,7 @@ services:
       - "3000:3000"
     image: eliakaris/blog
     volumes:
-    - ./.output:/usr/src/app/.output
+      - ./.output:/usr/src/app/.output
     depends_on:
       - server
   server:
