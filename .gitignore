@@ -5,11 +5,9 @@ node_modules/**/*
 /coverage
 
 # production
-/build
-/server/build
+build/
 
-server/build/
-server/node_modules/
+node_modules/
 
 # misc
 .DS_Store

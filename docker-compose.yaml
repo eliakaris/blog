@@ -18,15 +18,15 @@ services:
         - BUILD_REACT_APP_INSIGHTS_KEY=$REACT_APP_INSIGHTS_KEY
     ports:
       - "3000:3000"
-    image: eliakaris/blog
+    image: eliakaris/web
     volumes:
       - ./.output:/usr/src/app/.output
     depends_on:
-      - server
-  server:
+      - api
+  api:
     build:
-      context: ./server
-    image: eliakaris/server
+      context: ./api
+    image: eliakaris/api
     ports:
       - "3001:3001"
   prod:
@@ -38,6 +38,6 @@ services:
     restart: always
     depends_on:
       - web
-      - server
+      - api
   selenium:
     image: selenium/standalone-chrome
