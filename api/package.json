@@ -22,8 +22,8 @@
     "string": "^3.3.3"
   },
   "scripts": {
-    "build": "tsc -p ./tsconfig.json && cp -r ./data/ ./build/server/data/",
-    "start": "node ./build/server/server | bunyan",
+    "build": "tsc -p ./tsconfig.json && cp -r ./data/ ./build/api/data/",
+    "start": "node ./build/api/server | bunyan",
     "test": "npm run test:unit && npm run test:integration",
     "integration": "npm run test:integration",
     "test:unit": "cross-env CI=True npm run test:unit:client",
