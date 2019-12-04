@@ -1,17 +1,9 @@
 var path = require('path');
-var VisualRegressionCompare = require('wdio-visual-regression-service/compare');
- 
-function getScreenshotName(basePath) {
-  return function(context) {
-    const fileName = path.parse(context.test.file).base.replace('.mocha.ts', '');
-    const elementName = context.options.elementReferenceName ? context.options.elementReferenceName : 'WholePage';
 
-    console.log(path.join(basePath, fileName, elementName + '.png'));
-    return path.join(basePath, fileName, elementName + '.png');
-  };
-}
+const saveAboveTolerance = 1.5;
 
 exports.config = {
+    saveAboveTolerance,
     //
     // =====================
     // Server Configurations
@@ -84,8 +76,8 @@ exports.config = {
     // e.g. using promises you can set the sync option to false.
     sync: true,
     //
-    // Level of logging verbosity: silent | verbose | command | data | result | error
-    // logLevel: 'result',
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
+    logLevel: 'error',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -104,7 +96,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://0.0.0.0:3000',
+    baseUrl: 'http://0.0.0.0:8080',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -138,20 +130,17 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['visual-regression'],
-
-    visualRegression: {
-      compare: new VisualRegressionCompare.LocalCompare({
-        referenceName: getScreenshotName(path.join(process.cwd(), 'src/screenshots')),
-        screenshotName: getScreenshotName(path.join(process.cwd(), '.output/screenshots/screen')),
-        diffName: getScreenshotName(path.join(process.cwd(), '.output/screenshots/diff')),
-        misMatchTolerance: 0.01,
-      }),
-    
-      viewportChangePause: 300,
-      viewports: [{ width: 1024, height: 768 }],
-      orientations: ['portrait'],
-    },
+    services: [
+      [
+        'image-comparison', 
+        {
+          autoSaveBaseline: true,
+          formatImageName: '{tag}',
+          saveAboveTolerance,
+          returnAllCompareData: true,
+        },
+      ]
+    ],
 
     //
     // Framework you want to run your specs with.
@@ -165,7 +154,8 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: ['spec', 'junit'],
+    // reporters: ['spec', 'junit'],
+    reporters: ['spec'],
     reporterOptions: {
       junit: {
         outputDir: './.output/'
@@ -176,7 +166,9 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-      compilers: ['ts:ts-node/register'],
+      require: [
+        'tsconfig-paths/register'
+      ],
       ui: 'bdd',
     },
     //
@@ -210,10 +202,11 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function (capabilities, specs) {
-      require('ts-node/register'); 
       var chai = require('chai');
       global.expect = chai.expect;
       chai.Should();
+
+      require('ts-node').register({ files: true });
     },
     /**
      * Runs before a WebdriverIO command gets executed.

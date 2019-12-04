@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
@@ -23,18 +25,12 @@ function Footer() {
             <ul className="list-inline text-center">
               <li className="list-inline-item">
                 <a href="http://twitter.com/eliakaris">
-                  <span className="fa-stack fa-lg">
-                    <i className="fa fa-circle fa-stack-2x" />
-                    <i className="fa fa-twitter fa-stack-1x fa-inverse" />
-                  </span>
+                  <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="https://github.com/eliakaris/blog">
-                  <span className="fa-stack fa-lg">
-                    <i className="fa fa-circle fa-stack-2x" />
-                    <i className="fa fa-github fa-stack-1x fa-inverse" />
-                  </span>
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
               </li>
             </ul>
