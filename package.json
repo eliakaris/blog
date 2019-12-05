@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Elia's personal blog",
+  "scripts": {
+    "test:integration": "docker-compose up --build --no-color -d && docker-compose exec -T integration-tests bash /usr/src/app/bin/run_tests.sh",
+    "pretest:integration": "docker-compose down",
+    "posttest:integration": "docker-compose exec -T web cp /usr/src/app/.test_output/react-unit-tests.xml /usr/src/app/.output/ && docker-compose logs --no-color -t >> ./.output/service_logs.log && docker-compose down"  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliakaris/blog.git"
+  },
+  "author": "Elia Karagiannis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliakaris/blog/issues"
+  },
+  "homepage": "https://github.com/eliakaris/blog#readme"
+}

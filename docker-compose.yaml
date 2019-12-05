@@ -6,8 +6,6 @@ services:
     image: eliakaris/tests
     volumes:
       - ./.output:/usr/src/app/.output
-    ports:
-      - "3002:3002"
     depends_on:
       - prod
       - selenium
