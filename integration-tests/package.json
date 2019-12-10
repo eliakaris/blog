@@ -1,0 +1,32 @@
+{
+  "name": "integration-tests",
+  "version": "1.0.0",
+  "description": "Integration tests package",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "webdriverio": "^5.16.10"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.5",
+    "@types/mocha": "^5.2.7",
+    "@wdio/cli": "^5.16.10",
+    "@wdio/dot-reporter": "^5.16.5",
+    "@wdio/junit-reporter": "^5.15.5",
+    "@wdio/local-runner": "^5.16.10",
+    "@wdio/mocha-framework": "^5.16.10",
+    "@wdio/spec-reporter": "^5.16.5",
+    "@wdio/sync": "^5.16.10",
+    "chromedriver": "^78.0.1",
+    "fs-extra": "^8.1.0",
+    "ts-node": "^8.5.4",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.2",
+    "wdio-chromedriver-service": "^5.0.2",
+    "wdio-image-comparison-service": "^1.8.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/wdio run wdio.conf.js --baseUrl http://prod:8080/"
+  }
+}

@@ -6,16 +6,19 @@ typescript based react and redux for the frontend.
 
 Blog entries are written in Markdown and utilize the marked library to render as html.
 
+
+## when building server, use nmv use 8
+
 ## Running locally
 
 After cloning the project run the following from the project root to run locally:
 - npm install
 - npm run start:client
-- npm run start:server (from a new shell)
+- npm run start:server (from a new shell and node version 8)
 - open http://localhost:3000 from the browser of your choice
 
 To run tests run:
-- npm run test
+- yarn test
 
 ## Build status
 

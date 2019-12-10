@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationHeader /> tests renders a snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-light fixed-top"
+  id="mainNav"
+>
+  <div
+    className="container"
+  >
+    <NavbarBrand
+      href="/"
+      tag="a"
+    >
+      Elia Karagiannis
+    </NavbarBrand>
+    <NavbarToggler
+      onClick={[Function]}
+      tag="button"
+      type="button"
+    />
+    <Collapse
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      isOpen={false}
+      mountOnEnter={false}
+      navbar={true}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      tag="div"
+      timeout={350}
+      unmountOnExit={false}
+    >
+      <Nav
+        className="ml-auto"
+        navbar={true}
+        tag="ul"
+        vertical={false}
+      >
+        <NavItem
+          tag="li"
+        >
+          <ForwardRef
+            to="/"
+          >
+            Home
+          </ForwardRef>
+        </NavItem>
+        <NavItem
+          tag="li"
+        >
+          <ForwardRef
+            to="/about"
+          >
+            About
+          </ForwardRef>
+        </NavItem>
+        <NavItem
+          tag="li"
+        >
+          <ForwardRef
+            to="/blog"
+          >
+            Archive
+          </ForwardRef>
+        </NavItem>
+      </Nav>
+    </Collapse>
+  </div>
+</nav>
+`;

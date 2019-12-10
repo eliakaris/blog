@@ -1,14 +1,43 @@
 version: '3'
 services:
+  integration-tests:
+    build:
+      context: ./integration-tests
+    image: eliakaris/tests
+    volumes:
+      - ./.output:/usr/src/app/.output
+    depends_on:
+      - prod
+      - selenium
   web:
     build:
-      context: .
+      context: ./web
       args:
         - BUILD_REACT_APP_INSIGHTS_KEY=$REACT_APP_INSIGHTS_KEY
-    image: eliakaris/blog
+    ports:
+      - "3000:3000"
+    image: eliakaris/web
     volumes:
-    - ./.output:/usr/src/app/.output
+      - ./.output:/usr/src/app/.output
     depends_on:
-      - selenium
+      - api
+  api:
+    build:
+      context: ./api
+    image: eliakaris/api
+    ports:
+      - "3001:3001"
+  prod:
+    build:
+      context: ./reverse-proxy
+    ports:
+      - "8080:8080"
+    image: eliakaris/prod-proxy
+    restart: always
+    depends_on:
+      - web
+      - api
   selenium:
     image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"

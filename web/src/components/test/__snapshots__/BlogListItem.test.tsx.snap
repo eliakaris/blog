@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogListItem /> tests renders a snapshot 1`] = `
+<div
+  blog-slug="test-blog-entry"
+  className="post-preview"
+>
+  <ForwardRef
+    to="/blog/test-blog-entry"
+  >
+    <h2
+      className="post-title"
+    >
+      test blog entry
+    </h2>
+    <h3
+      className="post-subtitle"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "this is a summary text",
+        }
+      }
+    />
+  </ForwardRef>
+  <p
+    className="post-meta"
+  >
+    Posted on 
+    December 26th, 2017
+  </p>
+</div>
+`;
