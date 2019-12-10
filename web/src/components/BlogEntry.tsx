@@ -20,7 +20,7 @@ function BlogEntry(props: BlogEntryContainerProps) {
     API.fetchBlogPost(slug).then(setBlogEntry);
   }, [slug]);
 
-  const postRoot = 'https://github.com/eliakaris/blog/tree/master/server/data/posts';
+  const postRoot = 'https://github.com/eliakaris/blog/tree/master/api/data/posts';
   return (
     blogEntry ?
     (
