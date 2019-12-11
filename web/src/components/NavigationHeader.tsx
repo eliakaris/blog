@@ -19,7 +19,7 @@ function NavigationHeader() {
             <Nav className="ml-auto" navbar>
               <NavItem><NavLink to="/">Home</NavLink></NavItem>
               <NavItem><NavLink to="/about">About</NavLink></NavItem>
-              <NavItem><NavLink to="/blog">Archive</NavLink></NavItem>
+              <NavItem><NavLink to="/blog">Archives</NavLink></NavItem>
             </Nav>
           </Collapse>
       </div>
