@@ -7,7 +7,7 @@ function BlogList() {
   const [blogEntries, setBlogEntries] = useState<BlogListEntry[]>([]);
   React.useEffect(() => {
     API.fetchBlogListings().then(setBlogEntries);
-  }, [blogEntries]);
+  });
 
   var blogItems: JSX.Element[];
   blogItems = [];
