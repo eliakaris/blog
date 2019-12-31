@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "sourceRoot": "src",
     "outDir": "./build/api",
     "module": "commonjs",
