@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/applicationinsights-js": "^1.0.5",
     "@types/bunyan": "^1.8.4",
-    "apollo-server-express": "^2.9.15",
+    "apollo-server-express": "^2.14.2",
     "applicationinsights": "^1.0.1",
     "applicationinsights-js": "^1.0.15",
     "bunyan": "^1.8.12",
