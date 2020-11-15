@@ -1,19 +1,34 @@
 {
   "name": "blog",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "private": true,
   "description": "Elia's personal blog",
   "scripts": {
-    "test:integration": "docker-compose up --build --no-color -d && docker-compose exec -T integration-tests bash /usr/src/app/bin/run_tests.sh",
-    "pretest:integration": "docker-compose down",
-    "posttest:integration": "docker-compose exec -T web cp /usr/src/app/.test_output/react-unit-tests.xml /usr/src/app/.output/ && mkdir ./.service_output/ && docker-compose logs --no-color -t >> ./.service_output/service_logs.log && docker-compose down"  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eliakaris/blog.git"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "Elia Karagiannis",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eliakaris/blog/issues"
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    "cors": "^2.8.5",
+    "highlight.js": "^10.3.2",
+    "marked": "^1.2.4",
+    "moment": "^2.29.1",
+    "next": "10.0.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "reactstrap": "^8.7.1",
+    "startbootstrap-clean-blog": "^5.0.10",
+    "string": "^3.3.3",
+    "superagent": "^6.1.0"
   },
-  "homepage": "https://github.com/eliakaris/blog#readme"
+  "devDependencies": {
+    "@types/marked": "^1.1.0",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/string": "^0.0.30",
+    "typescript": "^4.0.5"
+  }
 }
