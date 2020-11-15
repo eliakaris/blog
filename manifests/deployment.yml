@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: eliakarisblog 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eliakarisblog
+  template:
+    metadata:
+      labels:
+        app: eliakarisblog 
+    spec:
+      containers:
+        - name: eliakarisblog 
+          image: nextline.azurecr.io/eliakarisblog
+          ports:
+          - containerPort: 80
