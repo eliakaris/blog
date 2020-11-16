@@ -56,8 +56,6 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
     environment: 'eliakarisblog.blog'
     strategy:
       runOnce:
