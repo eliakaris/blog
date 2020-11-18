@@ -18,12 +18,57 @@ variables:
   tag: '$(Build.BuildId)'
   imagePullSecret: 'nextline1592d9cd-auth'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-  
-
 stages:
+- stage: PR_Build
+  condition: eq(variables['Build.Reason'], 'PullRequest')
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      name: Default
+    steps:
+    - task: Bash@3
+      displayName: Down services
+      inputs:
+        targetType: inline
+        script: docker-compose down
+    - task: Bash@3
+      displayName: Build and run service
+      inputs:
+        targetType: inline
+        script: docker-compose up -d --build
+    - task: Bash@3
+      displayName: Wait for services
+      inputs:
+        targetType: inline
+        script: sleep 3s
+    - task: Bash@3
+      displayName: Run tests
+      inputs:
+        targetType: inline
+        script: docker-compose exec -T integration-tests yarn test
+    - task: Bash@3
+      displayName: Copy test files
+      condition: always()
+      inputs:
+        targetType: inline
+        script: docker cp $( docker-compose ps -q integration-tests):/usr/src/app/.output/ .
+    - task: Bash@3
+      displayName: Down services
+      condition: always()
+      inputs:
+        targetType: inline
+        script: docker-compose down
+    - task: PublishTestResults@2
+      displayName: Publish integration test results
+      condition: always()
+      inputs:
+        testResultsFormat: xUnit
+        testResultsFiles: .output/*.log
+
 - stage: Build
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
   displayName: Build stage
   jobs:  
   - job: Build
@@ -45,6 +90,7 @@ stages:
       artifact: manifests
 
 - stage: Deploy
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
   displayName: Deploy stage
   dependsOn: Build
 

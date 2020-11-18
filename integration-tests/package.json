@@ -27,6 +27,6 @@
     "wdio-image-comparison-service": "^1.8.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/wdio run wdio.conf.js --baseUrl http://prod:8080/"
+    "test": "node_modules/.bin/wdio run wdio.conf.js --baseUrl http://web:3000/ --hostname selenium"
   }
 }
