@@ -4,8 +4,6 @@ services:
     build:
       context: ./integration-tests
     image: eliakaris/tests
-    volumes:
-      - ./.output:/usr/src/app/.output
     depends_on:
       - web
       - selenium
@@ -17,8 +15,6 @@ services:
     ports:
       - "3000:3000"
     image: eliakaris/web
-    volumes:
-      - ./.output:/usr/src/app/.output
   selenium:
     image: selenium/standalone-chrome
     ports:

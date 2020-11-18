@@ -13,7 +13,7 @@ describe('test suite', () => {
     browser.url('/');
     browser.$('nav .nav-item:nth-child(3)').click();
     screenshotElement('first-blog', browser.$('div[blog-slug="i-have-a-blog"]'));
-    browser.$('div[blog-slug="i-have-a-blog"] a[href="/blog/i-have-a-blog"]').click();
+    browser.$('div[blog-slug="i-have-a-blog"]').click();
     screenshotElement('first-blog-content', browser.$('article'));
   });
 });
