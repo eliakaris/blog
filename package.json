@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.1.12",
     "cors": "^2.8.5",
     "highlight.js": "^10.3.2",
-    "marked": "^1.2.4",
+    "marked": "^2.0.0",
     "moment": "^2.29.1",
     "next": "10.0.1",
     "react": "17.0.1",
